@@ -1,0 +1,101 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header>
+	<nav>
+		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<div class="internal-links">
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/about">About</HeaderLink>
+		</div>
+		<div class="social-links">
+			<!-- LINKEDIN -->
+			<a href="https://www.linkedin.com/in/laura-montironi" target="_blank" rel="noopener noreferrer">
+				<span class="sr-only">LinkedIn</span>
+				<svg viewBox="0 0 24 24" aria-hidden="true" width="28" height="28">
+					<path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.48 1 4.98 2.12 4.98 3.5zM.24 8.98h4.48V24H.24V8.98zM8.34 8.98h4.29v2.05h.06c.6-1.13 2.06-2.32 4.24-2.32 4.54 0 5.38 2.99 5.38 6.87V24h-4.48v-7.56c0-1.8-.03-4.12-2.51-4.12-2.52 0-2.9 1.97-2.9 3.99V24H8.34V8.98z"/>
+				</svg>
+			</a>
+
+			<!-- PORTFOLIO / WEB -->
+			<a href="https://portfoliodev-laumontironi.netlify.app" target="_blank" rel="noopener noreferrer">
+				<span class="sr-only">Portfolio</span>
+				<svg viewBox="0 0 24 24" aria-hidden="true" width="28" height="28">
+					<path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 
+					10-4.48 10-10S17.52 2 12 2zm7.93 9h-3.95a15.7 15.7 0 0 0-1.38-5.03A8.03 8.03 0 0 1 19.93 11zM12 4.07c1.13 1.63 1.99 3.63 2.45 5.93H9.55C10.01 7.7 10.87 5.7 12 4.07zM4.07 13h3.95c.23 1.8.76 3.55 1.55 5.03A8.03 8.03 0 0 1 4.07 13zm3.95-2H4.07a8.03 8.03 0 0 1 5.5-5.03A15.7 15.7 0 0 0 8.02 11zM12 19.93c-1.13-1.63-1.99-3.63-2.45-5.93h4.9c-.46 2.3-1.32 4.3-2.45 5.93zM14.43 18.03c.79-1.48 1.32-3.23 1.55-5.03h3.95a8.03 8.03 0 0 1-5.5 5.03z"/>
+				</svg>
+			</a>
+
+			<!-- GITHUB -->
+			<a href="https://github.com/LauMontironi" target="_blank" rel="noopener noreferrer">
+				<span class="sr-only">GitHub</span>
+				<svg viewBox="0 0 16 16" aria-hidden="true" width="28" height="28">
+					<path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 
+					7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94
+					-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72
+					1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
+					0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18
+					1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16
+					1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54
+					1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+				</svg>
+			</a>
+		</div>
+	</nav>
+</header>
+
+<style>
+	header {
+		margin: 0;
+		padding: 0 1em;
+		background: white;
+		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+	}
+	h2 {
+		margin: 0;
+		font-size: 1em;
+	}
+	h2 a,
+	h2 a.active {
+		text-decoration: none;
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	nav a {
+		padding: 1em 0.5em;
+		color: var(--black);
+		border-bottom: 4px solid transparent;
+		text-decoration: none;
+	}
+	nav a.active {
+		border-bottom-color: var(--accent);
+	}
+	.social-links,
+	.social-links a {
+		display: flex;
+		align-items: center;
+	}
+
+	.social-links a {
+	opacity: 0.75;
+	transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+	.social-links a:hover {
+		opacity: 1;
+		color: var(--accent);
+		transform: translateY(-2px);
+	}
+
+	@media (max-width: 720px) {
+		.social-links {
+			display: none;
+		}
+	}
+</style>

@@ -1,0 +1,245 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+import { Image } from 'astro:assets';
+import perfilAvatar from '../assets/perfil_avatar.png';
+
+import { getCollection } from 'astro:content';
+
+function toSlug(entry) {
+  const raw = entry?.slug ?? entry?.id ?? '';
+  const base = raw.split('/').pop() ?? '';
+  return base.replace(/\.(md|mdx)$/i, '');
+}
+
+
+const allPosts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+
+const posts = allPosts.slice(0, -1).slice(0, 3);
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+
+  <body>
+    <Header />
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero__media">
+          <Image
+            src={perfilAvatar}
+            alt="Avatar de Laura Montironi"
+            width={260}
+            height={260}
+            class="hero__avatar"
+          />
+        </div>
+
+        <div class="hero__content">
+          <p class="hero__kicker">Diario de una aprendiz de código</p>
+          <h1 class="hero__title">Hola, soy Laura Montironi 👋</h1>
+
+          <p class="hero__subtitle">
+            Ex contadora, mamá y futura developer en construcción. Este es mi espacio para documentar mi cambio de carrera,
+            mis aprendizajes y el caos mental de empezar de nuevo.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="/blog">Leer el blog</a>
+            <a class="btn btn--ghost" href="/about">Sobre mí</a>
+          </div>
+
+          <div class="hero__links">
+            <a href="https://portfoliodev-laumontironi.netlify.app" target="_blank" rel="noreferrer">Portfolio</a>
+            <span class="dot">•</span>
+            <a href="https://github.com/LauMontironi/astro-blog-template" target="_blank" rel="noreferrer">Repo</a>
+            <span class="dot">•</span>
+            <a href="https://www.linkedin.com/in/laura-montironi" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ÚLTIMOS POSTS -->
+      <section class="latest">
+        <div class="latest__head">
+          <h2 class="latest__title">Últimos artículos</h2>
+          <a class="latest__all" href="/blog">Ver todo →</a>
+        </div>
+
+        <div class="posts">
+          {posts.map((post) => {
+            const slug = toSlug(post);
+            if (!slug) return null;
+
+            return (
+              <article class="card">
+                <h3 class="card__title">
+                  <a class="card__link" href={`/blog/${slug}/`}>
+                    {post.data.title}
+                  </a>
+                </h3>
+
+                {post.data.pubDate && (
+                  <p class="card__meta">
+                    {new Date(post.data.pubDate).toLocaleDateString('es-ES', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </p>
+                )}
+
+                <p class="card__desc">{post.data.description}</p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .container{
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: clamp(1.5rem, 3vw, 3rem) 1rem;
+  }
+
+  .hero{
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: clamp(1.25rem, 3vw, 2.75rem);
+    align-items: center;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 24px;
+    background: rgba(0,0,0,.02);
+  }
+
+  .hero__avatar{
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,.08);
+    box-shadow: 0 14px 45px rgba(0,0,0,.10);
+  }
+
+  .hero__kicker{
+    margin: 0 0 .5rem;
+    font-size: .95rem;
+    opacity: .72;
+  }
+
+  .hero__title{
+    margin: 0 0 .6rem;
+    font-size: clamp(1.6rem, 2.2vw, 2rem);
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .hero__subtitle{
+    margin: 0 0 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 62ch;
+    opacity: .9;
+  }
+
+  .hero__actions{
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    margin-bottom: .9rem;
+  }
+
+  .btn{
+    padding: .7rem 1.05rem;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid rgba(0,0,0,.14);
+  }
+
+  .btn--primary{
+    background: rgba(0,0,0,.92);
+    color: white;
+  }
+
+  .btn--ghost{
+    background: rgba(255,255,255,.65);
+  }
+
+  .hero__links{
+    display: flex;
+    gap: .6rem;
+    flex-wrap: wrap;
+    font-size: .95rem;
+    opacity: .85;
+  }
+
+  .dot{ opacity: .5; }
+
+  .latest{
+    margin-top: clamp(2rem, 4vw, 3rem);
+  }
+
+  .latest__head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .latest__title{
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .posts{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .card{
+    padding: 1.1rem;
+    border-radius: 18px;
+    border: 1px solid rgba(0,0,0,.08);
+    background: rgba(255,255,255,.6);
+  }
+
+  .card__title{
+    margin: 0 0 .4rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .card__meta{
+    font-size: .86rem;
+    opacity: .65;
+    margin-bottom: .6rem;
+  }
+
+  .card__desc{
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px){
+    .posts{ grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 720px){
+    .hero{ grid-template-columns: 1fr; }
+  }
+</style>
