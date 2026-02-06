@@ -50,7 +50,9 @@ Y porque quiero que otras personas que estén pensando “¿y si empiezo de nuev
 
 🔗 Conecta conmigo
 
-💼 Portfolio: [link)](https://portfoliodev-laumontironi.netlify.app)
+💻 web : ([Livesite])(https://mi-camino-dev-blog.vercel.app/)
+
+💼 Portfolio: [(link)](https://portfoliodev-laumontironi.netlify.app)
 
 💻 GitHub: ([perfil](https://github.com/LauMontironi))
 
