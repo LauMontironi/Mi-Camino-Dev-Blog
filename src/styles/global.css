@@ -5,7 +5,7 @@
  */
 
 :root {
-	--accent: #2337ff;
+	--accent: #334155;
 	--accent-dark: #000d8a;
 	--black: 15, 18, 25;
 	--gray: 96, 115, 159;
@@ -151,5 +151,144 @@ hr {
 	/* modern browsers, clip-path works inwards from each corner */
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
+	white-space: nowrap;
+}
+
+
+
+/* =========================
+   Base
+========================= */
+
+/* 🎨 Light más suave (no dark) + cards más “pro” */
+:root {
+	--page-bg: #f4f6f8;
+	/* fondo general menos blanco */
+	--card-bg: #ffffff;
+	--card-border: rgba(15, 23, 42, 0.08);
+	--card-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+
+	--text: #0f172a;
+	--muted: rgba(15, 23, 42, 0.72);
+}
+
+body {
+	background: var(--page-bg);
+	color: var(--text);
+}
+
+/* Si quieres cards más marcadas, mantén esto.
+   Ajusta el selector a tu card real si no es article */
+.card,
+.post-card,
+article {
+	background: var(--card-bg);
+	border: 1px solid var(--card-border);
+	border-radius: 16px;
+	box-shadow: var(--card-shadow);
+	padding: 1.1rem;
+	transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover,
+.post-card:hover,
+article:hover {
+	transform: translateY(-2px);
+	border-color: rgba(124, 58, 237, 0.25);
+	/* cambia por tu accent si quieres */
+	box-shadow: 0 14px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* texto “secundario” dentro de cards */
+.card p,
+.post-card p,
+article p {
+	color: var(--muted);
+}
+
+/* Accesibilidad: foco visible */
+a:focus-visible,
+button:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+	border-radius: 8px;
+}
+
+/* Evita micro overflow horizontal típico por svg/paddings */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+
+/* =========================
+   Tu CSS actual (tal cual)
+========================= */
+
+input {
+	font-size: 16px;
+}
+
+table {
+	width: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+code {
+	padding: 2px 5px;
+	background-color: rgb(var(--gray-light));
+	border-radius: 2px;
+}
+
+pre {
+	padding: 1.5em;
+	border-radius: 8px;
+}
+
+pre>code {
+	all: unset;
+}
+
+blockquote {
+	border-left: 4px solid var(--accent);
+	padding: 0 0 0 20px;
+	margin: 0;
+	font-size: 1.333em;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid rgb(var(--gray-light));
+}
+
+@media (max-width: 720px) {
+	body {
+		font-size: 18px;
+	}
+
+	main {
+		padding: 1em;
+	}
+}
+
+.sr-only {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
 	white-space: nowrap;
 }

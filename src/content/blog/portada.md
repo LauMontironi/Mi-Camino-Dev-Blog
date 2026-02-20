@@ -63,3 +63,9 @@ Aprender a programar desde cero, equivocarse y disfrutar el proceso.
 
 🌍⚡ [Conectar Angular con el mundo real y sobrevivir](/blog/15-post/)
 Volver a JavaScript a través de Angular, el caos mental del cambio de stack y los primeros pasos de mi proyecto real.
+
+🚀[El día que dejé de 'practicar' y empecé a programar de verdad](/blog/16-post/)
+Proyecto Final · UpgradeFood · De estudiante a desarrolladora.
+
+🎓[El final del bootcamp, el comienzo de mi verdadero camino tech](/blog/17-post/)
+Cuando terminar de estudiar es, en realidad, empezar de verdad.
