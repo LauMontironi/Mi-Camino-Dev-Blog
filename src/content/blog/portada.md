@@ -1,7 +1,7 @@
 ---
 title: "# Aprendiendo a programar desde CERO SIN RENDIRME "
 description: "📚 Diario de una aprendiz de código - Indice"
-pubDate: "Feb 28 2026"
+pubDate: "Apr 28 2026"
 heroImage: "../../assets/Hero.png"
 ---
 
@@ -55,7 +55,7 @@ Aprender a programar desde cero, equivocarse y disfrutar el proceso.
 🤖
 🏀 [FastAPI: De un solo archivo a “Pasar la Bola” (Chuleta de supervivencia)](/blog/11-post/)
 
-🫀 [Re-start: Cuando el cerebro dice 'basta' para poder seguir](blog/12-post/)
+🫀 [Re-start: Cuando el cerebro dice 'basta' para poder seguir](/blog/12-post/)
 
 🤖🧭 [Angular y el laberinto tech: con IA todo es mejor](/blog/13-post/)
 
@@ -69,3 +69,5 @@ Proyecto Final · UpgradeFood · De estudiante a desarrolladora.
 
 🎓[El final del bootcamp, el comienzo de mi verdadero camino tech](/blog/17-post/)
 Cuando terminar de estudiar es, en realidad, empezar de verdad.
+
+🔍[Buscar trabajo también es un trabajo (y nadie te prepara para eso)](/blog/18-post/)

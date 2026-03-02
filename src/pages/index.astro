@@ -97,23 +97,44 @@ const posts = allPosts.slice(0, -1).slice(0, 3);
 
               return (
                 <article class="card">
-                  <h3 class="card__title">
-                    <a class="card__link" href={`/blog/${slug}/`}>
-                      {post.data.title}
+                  {post.data.heroImage && (
+                    <a
+                      class="card__coverLink"
+                      href={`/blog/${slug}/`}
+                      aria-label={post.data.title}
+                    >
+                      <Image
+                        class="card__cover"
+                        src={post.data.heroImage}
+                        alt={post.data.title}
+                        width={720}
+                        height={360}
+                      />
                     </a>
-                  </h3>
-
-                  {post.data.pubDate && (
-                    <p class="card__meta">
-                      {new Date(post.data.pubDate).toLocaleDateString("es-ES", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </p>
                   )}
 
-                  <p class="card__desc">{post.data.description}</p>
+                  <div class="card__body">
+                    <h3 class="card__title">
+                      <a class="card__link" href={`/blog/${slug}/`}>
+                        {post.data.title}
+                      </a>
+                    </h3>
+
+                    {post.data.pubDate && (
+                      <p class="card__meta">
+                        {new Date(post.data.pubDate).toLocaleDateString(
+                          "es-ES",
+                          {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          },
+                        )}
+                      </p>
+                    )}
+
+                    <p class="card__desc">{post.data.description}</p>
+                  </div>
                 </article>
               );
             })
@@ -248,6 +269,13 @@ const posts = allPosts.slice(0, -1).slice(0, 3);
     border-radius: 18px;
     border: 1px solid rgba(0, 0, 0, 0.08);
     background: rgba(255, 255, 255, 0.6);
+  }
+
+  .card__cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
   }
 
   .card__title {
