@@ -71,3 +71,5 @@ Proyecto Final · UpgradeFood · De estudiante a desarrolladora.
 Cuando terminar de estudiar es, en realidad, empezar de verdad.
 
 🔍[Buscar trabajo también es un trabajo (y nadie te prepara para eso)](/blog/18-post/)
+
+🚧 [En el mientras tanto](/blog/19-post/)

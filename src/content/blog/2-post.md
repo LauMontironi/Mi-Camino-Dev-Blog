@@ -2,7 +2,7 @@
 title: "# 2 #🪜El paso que me cambió la vida (laboral). "
 description: "Lorem ipsum dolor sit amet"
 pubDate: "Jul 15 2025"
-heroImage: "../../assets/cover-capitulo2.jpeg"
+heroImage: "../../assets/Elige tu camino profesional.png"
 ---
 
 ## 🗃️ De los libros a la oficina: una elección sin pasión
