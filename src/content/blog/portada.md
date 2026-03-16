@@ -73,3 +73,5 @@ Cuando terminar de estudiar es, en realidad, empezar de verdad.
 🔍[Buscar trabajo también es un trabajo (y nadie te prepara para eso)](/blog/18-post/)
 
 🚧 [En el mientras tanto](/blog/19-post/)
+
+🚀[Construyendo mi primer SaaS con FastAPI y PostgreSQL: los errores reales que casi rompen mi backend](/blog/20-post/)
