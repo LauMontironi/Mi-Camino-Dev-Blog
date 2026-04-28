@@ -44,7 +44,8 @@ body {
 	line-height: 1.7;
 }
 main {
-	width: 720px;
+
+	width: 900px;
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
@@ -181,7 +182,7 @@ body {
    Ajusta el selector a tu card real si no es article */
 .card,
 .post-card,
-article {
+ article{
 	background: var(--card-bg);
 	border: 1px solid var(--card-border);
 	border-radius: 16px;
