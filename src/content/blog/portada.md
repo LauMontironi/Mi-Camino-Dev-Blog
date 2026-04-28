@@ -1,7 +1,7 @@
 ---
 title: "# Aprendiendo a programar desde CERO SIN RENDIRME "
 description: "📚 Diario de una aprendiz de código - Indice"
-pubDate: "Apr 28 2026"
+pubDate: "jun 28 2026"
 heroImage: "../../assets/Hero.png"
 ---
 

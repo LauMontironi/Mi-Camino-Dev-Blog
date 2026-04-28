@@ -1,7 +1,7 @@
 ---
 title: "# 21 # 🥊 Boxea bien. El knock-out viene solo"
 description: "Cómo pasé de terminar un bootcamp a trabajar en backend en una fintech."
-pubDate: "Mar 24 2026"
+pubDate: "Apr 24 2026"
 heroImage: "../../assets/hired2.png"
 ---
 
