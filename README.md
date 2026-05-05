@@ -52,7 +52,7 @@ Y porque quiero que otras personas que estén pensando “¿y si empiezo de nuev
 
 💻 web : ([Livesite])(https://mi-camino-dev-blog.vercel.app/)
 
-💼 Portfolio: [(link)](https://portfoliodev-laumontironi.netlify.app)
+💼 Portfolio: [(link)](https://mi-portfolio-dev-laura-montironi.vercel.app/)
 
 💻 GitHub: ([perfil](https://github.com/LauMontironi))
 
