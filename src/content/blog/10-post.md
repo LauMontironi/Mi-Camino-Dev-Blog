@@ -66,7 +66,7 @@ poco... ¡y eso es progreso!
 
 Lo comparto por aquí también, por si queréis echar un vistazo:
 
-👉 https://portfoliodev-laumontironi.netlify.app/
+👉 https://mi-portfolio-dev-laura-montironi.vercel.app/
 
 ¡Ya hemos terminado el módulo de bases de datos! Ahora comenzamos
 FastAPI, y esto ya va tomando forma de API real. Os sigo contando.

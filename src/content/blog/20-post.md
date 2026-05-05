@@ -206,7 +206,7 @@ Si quieres ver el progreso del proyecto o revisar el código:
 
 🌐 Portfolio
 
-👉 https://portfoliodev-laumontironi.netlify.app/
+👉 https://mi-portfolio-dev-laura-montironi.vercel.app/
 
 💡 romper cosas es parte del proceso.
 
