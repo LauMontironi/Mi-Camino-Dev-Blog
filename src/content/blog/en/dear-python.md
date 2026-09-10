@@ -2,7 +2,7 @@
 title: "🐍 Dear Python:"
 description: "A love letter (and a confused-syntax letter) to Python, written by someone who came from JavaScript and the myth of the easy language."
 pubDate: "Oct 16 2025"
-heroImage: "../../../assets/cover-capitulo9.jpeg"
+heroImage: "../../../assets/covers/ch09-the-path-becomes-a-snake.png"
 chapter: 9
 category: codigo
 tags: ["Python"]

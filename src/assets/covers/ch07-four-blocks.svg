@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>Four blocks of learning, one path through them</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <path d="M-20 250 H300 C 420 250, 420 430, 540 430 H860 C 980 430, 980 250, 1100 250 H1232" fill="none" stroke="#17130F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="162" y="187" width="240" height="150" rx="20" fill="#17130F"/><rect x="150" y="175" width="240" height="150" rx="20" fill="#FFFDF8" stroke="#17130F" stroke-width="9"/><rect x="162" y="367" width="240" height="150" rx="20" fill="#17130F"/><rect x="150" y="355" width="240" height="150" rx="20" fill="#4C7DFF" stroke="#17130F" stroke-width="9"/><rect x="732" y="187" width="240" height="150" rx="20" fill="#17130F"/><rect x="720" y="175" width="240" height="150" rx="20" fill="#4C7DFF" stroke="#17130F" stroke-width="9"/><rect x="732" y="367" width="240" height="150" rx="20" fill="#17130F"/><rect x="720" y="355" width="240" height="150" rx="20" fill="#FFFDF8" stroke="#17130F" stroke-width="9"/>
+  <circle cx="300" cy="250" r="18" fill="#4C7DFF" stroke="#17130F" stroke-width="8"/><circle cx="540" cy="430" r="18" fill="#4C7DFF" stroke="#17130F" stroke-width="8"/><circle cx="860" cy="430" r="18" fill="#4C7DFF" stroke="#17130F" stroke-width="8"/><circle cx="1100" cy="250" r="18" fill="#4C7DFF" stroke="#17130F" stroke-width="8"/>
+  </g>
+</svg>

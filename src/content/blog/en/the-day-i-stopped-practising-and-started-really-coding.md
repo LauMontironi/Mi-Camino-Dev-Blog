@@ -2,7 +2,7 @@
 title: "🚀 The day I stopped 'practising' and started really coding"
 description: "Final project at the UpgradeHub bootcamp: real architecture, real deployment, real mistakes (yes, I deleted the repo) and a complete API running in production."
 pubDate: "Feb 16 2026"
-heroImage: "../../../assets/upgrade_food.jpg"
+heroImage: "../../../assets/covers/ch16-upgradefood.png"
 chapter: 16
 category: codigo
 tags: ["final project", "deploy", "API"]

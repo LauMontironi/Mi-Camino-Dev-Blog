@@ -2,7 +2,7 @@
 title: "📍 Un viaje continuo: de Córdoba a Barcelona"
 description: "Transición de una carrera en contaduría a programación web, junto a mi familia y mis experiencias de vida"
 pubDate: "Jul 08 2025"
-heroImage: "../../assets/cover-capitulo1.png"
+heroImage: "../../assets/covers/ch01-cordoba-barcelona.png"
 chapter: 1
 category: camino
 tags: ["migración", "Córdoba", "Barcelona"]

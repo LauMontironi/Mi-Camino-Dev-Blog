@@ -2,7 +2,7 @@
 title: "🫀 Re-start: Cuando el cerebro dice 'basta' para poder seguir"
 description: "Reflexión sobre la saturación mental y la importancia de desconectar."
 pubDate: "Nov 21 2025"
-heroImage: "../../assets/dsconectar.png"
+heroImage: "../../assets/covers/ch12-restart.png"
 chapter: 12
 category: camino
 tags: ["burnout", "salud mental"]

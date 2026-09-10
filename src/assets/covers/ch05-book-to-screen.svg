@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>The path leaves a book and enters a screen</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <g stroke="#17130F" stroke-width="9" stroke-linejoin="round">
+    <path d="M120 466 L280 430 L280 300 L120 336 Z" fill="#FFFDF8"/>
+    <path d="M440 466 L280 430 L280 300 L440 336 Z" fill="#FFFDF8"/>
+    <path d="M280 430 V300" fill="none"/>
+    <path d="M120 466 L280 430 L440 466" fill="#FF8A5C"/>
+  </g>
+  <path d="M280 316 C 320 210, 520 150, 700 214" fill="none" stroke="#17130F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="214" r="18" fill="#FF8A5C" stroke="#17130F" stroke-width="8"/>
+  <g stroke="#17130F" stroke-width="9" stroke-linejoin="round">
+    <rect x="740" y="212" width="332" height="220" rx="18" fill="#17130F" transform="translate(12 12)"/>
+    <rect x="740" y="212" width="332" height="220" rx="18" fill="#FFFDF8"/>
+    <path d="M700 470 H1112 L1072 432 H740 Z" fill="#FF8A5C"/>
+  </g>
+  <g stroke="#17130F" stroke-width="9" stroke-linecap="round">
+    <path d="M786 274 h150 M786 320 h240 M786 366 h108"/>
+  </g>
+  </g>
+</svg>

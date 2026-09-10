@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>The path forms a power symbol</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <circle cx="600" cy="330" r="150" fill="#FF8A5C"/>
+  <path d="M-20 500 C 200 500, 300 470, 372 424" fill="none" stroke="#17130F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M828 424 C 900 470, 1000 500, 1232 500" fill="none" stroke="#17130F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M492 216 a150 150 0 1 0 216 0" fill="none" stroke="#17130F" stroke-width="22"
+        stroke-linecap="round"/>
+  <path d="M600 150 V310" fill="none" stroke="#17130F" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="372" cy="424" r="18" fill="#FF8A5C" stroke="#17130F" stroke-width="8"/><circle cx="828" cy="424" r="18" fill="#FF8A5C" stroke="#17130F" stroke-width="8"/>
+  </g>
+</svg>

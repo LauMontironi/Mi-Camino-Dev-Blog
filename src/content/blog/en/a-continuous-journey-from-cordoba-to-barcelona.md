@@ -2,7 +2,7 @@
 title: "📍 A continuous journey: from Córdoba to Barcelona"
 description: "Moving from a career in accounting to web development, alongside my family and my life experiences."
 pubDate: "Jul 08 2025"
-heroImage: "../../../assets/cover-capitulo1.png"
+heroImage: "../../../assets/covers/ch01-cordoba-barcelona.png"
 chapter: 1
 category: camino
 tags: ["migration", "Córdoba", "Barcelona"]

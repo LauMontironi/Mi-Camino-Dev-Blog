@@ -2,7 +2,7 @@
 title: "🚀 Angular and the tech maze: everything is better with AI!"
 description: "Angular after Christmas: I came close to dropping out of the bootcamp, and how AI helped me get hooked again."
 pubDate: "Jan 08 2026"
-heroImage: "../../../assets/cover-capituloXIV.png"
+heroImage: "../../../assets/covers/ch13-the-maze.png"
 chapter: 13
 category: codigo
 tags: ["Angular", "AI"]

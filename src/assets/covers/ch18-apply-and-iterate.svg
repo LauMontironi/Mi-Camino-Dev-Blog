@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>Applications, and a loop back to try again</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <g stroke="#17130F" stroke-width="9" stroke-linejoin="round">
+    <rect x="252" y="146" width="212" height="272" rx="16" fill="#17130F"/>
+    <rect x="238" y="132" width="212" height="272" rx="16" fill="#FFFDF8"/>
+    <rect x="222" y="116" width="212" height="272" rx="16" fill="#6FDCA8"/>
+  </g>
+  <g stroke="#17130F" stroke-width="9" stroke-linecap="round">
+    <path d="M258 176 h100 M258 220 h140 M258 264 h140 M258 308 h84"/>
+  </g>
+  <path d="M-20 500 H560 C 700 500, 700 320, 560 320 C 460 320, 460 500, 600 500 H1232" fill="none" stroke="#17130F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="600" cy="500" r="18" fill="#6FDCA8" stroke="#17130F" stroke-width="8"/>
+  </g>
+</svg>

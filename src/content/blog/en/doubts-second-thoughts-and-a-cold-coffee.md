@@ -2,7 +2,7 @@
 title: "🤯 Doubts, second thoughts and a cold coffee"
 description: "The dilemma of the two Lauras: looking at bootcamps, doubting everything, and asking myself whether starting from scratch is really worth it."
 pubDate: "Jul 30 2025"
-heroImage: "../../../assets/cover-capitulo4.jpeg"
+heroImage: "../../../assets/covers/ch04-cold-coffee.png"
 chapter: 4
 category: camino
 tags: ["doubts", "impostor syndrome"]

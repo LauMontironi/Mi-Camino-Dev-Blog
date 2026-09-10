@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>A finish flag the path simply passes</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <path d="M-20 470 H700 C 900 470, 1020 380, 1120 220 C 1150 172, 1170 140, 1190 108" fill="none" stroke="#17130F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M608 470 V150" fill="none" stroke="#17130F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="632" y="182" width="232" height="108" fill="#17130F"/>
+  <rect x="620" y="170" width="232" height="108" fill="#FFC63C"/>
+  <g><rect x="620" y="170" width="58" height="36" fill="#17130F"/><rect x="736" y="170" width="58" height="36" fill="#17130F"/><rect x="678" y="206" width="58" height="36" fill="#17130F"/><rect x="794" y="206" width="58" height="36" fill="#17130F"/><rect x="620" y="242" width="58" height="36" fill="#17130F"/><rect x="736" y="242" width="58" height="36" fill="#17130F"/></g>
+  <rect x="620" y="170" width="232" height="108" fill="none" stroke="#17130F" stroke-width="9"/>
+  <circle cx="608" cy="470" r="18" fill="#FFC63C" stroke="#17130F" stroke-width="8"/>
+  </g>
+</svg>

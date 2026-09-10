@@ -2,7 +2,7 @@
 title: "🚧 In the meantime"
 description: "Building two projects at once: working in a team and building a SaaS from scratch."
 pubDate: "Mar 09 2026"
-heroImage: "../../../assets/buildingwhilelearning.png"
+heroImage: "../../../assets/covers/ch19-two-projects.png"
 chapter: 19
 category: trabajo
 tags: ["SaaS", "teamwork"]

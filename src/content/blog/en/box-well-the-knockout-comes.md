@@ -2,7 +2,7 @@
 title: "🥊 Box well. The knockout comes on its own"
 description: "How I went from finishing a bootcamp to working in backend at a fintech."
 pubDate: "Apr 24 2026"
-heroImage: "../../../assets/hired2.png"
+heroImage: "../../../assets/covers/ch21-the-door.png"
 chapter: 21
 category: trabajo
 tags: ["fintech", "backend", "hired"]

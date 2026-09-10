@@ -2,7 +2,7 @@
 title: "🔍 Job hunting is a job too (and nobody prepares you for it)"
 description: "And I am learning it the hard way."
 pubDate: "Mar 02 2026"
-heroImage: "../../../assets/imagen_para_astro.png"
+heroImage: "../../../assets/covers/ch18-apply-and-iterate.png"
 chapter: 18
 category: trabajo
 tags: ["job hunting"]

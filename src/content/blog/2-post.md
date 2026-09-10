@@ -2,7 +2,7 @@
 title: "🪜El paso que me cambió la vida (laboral)."
 description: "De los libros a la oficina: mi recorrido laboral y ese intento constante de cambio y superación, desde una carrera elegida sin pasión."
 pubDate: "Jul 15 2025"
-heroImage: "../../assets/Elige tu camino profesional.png"
+heroImage: "../../assets/covers/ch02-the-broken-step.png"
 chapter: 2
 category: camino
 tags: ["cambio de carrera", "decisiones"]

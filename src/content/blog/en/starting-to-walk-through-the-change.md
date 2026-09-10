@@ -2,7 +2,7 @@
 title: "💻☕ Starting to walk through the change"
 description: "The Upgrade Hub prework and the shock of learning how to study programming when you come from the school of textbooks."
 pubDate: "Sep 01 2025"
-heroImage: "../../../assets/cover-capitulo5.png"
+heroImage: "../../../assets/covers/ch05-book-to-screen.png"
 chapter: 5
 category: camino
 tags: ["first steps", "bootcamp"]

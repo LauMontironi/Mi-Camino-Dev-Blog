@@ -2,7 +2,7 @@
 title: "🚀 Angular y el laberinto tech: con IA todo es mejor!"
 description: "Angular después de las Navidades: estuve a punto de abandonar el bootcamp y cómo la IA me ayudó a volver a engancharme."
 pubDate: "Jan 08 2026"
-heroImage: "../../assets/cover-capituloXIV.png"
+heroImage: "../../assets/covers/ch13-the-maze.png"
 chapter: 13
 category: codigo
 tags: ["Angular", "IA"]

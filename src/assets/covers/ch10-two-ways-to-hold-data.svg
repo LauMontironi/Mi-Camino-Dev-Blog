@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>A relational store and a document store</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <path d="M-20 520 H1232" fill="none" stroke="#17130F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <g stroke="#17130F" stroke-width="9" stroke-linejoin="round">
+    <path d="M198 216 h224 v212 a112 34 0 0 1 -224 0 z" fill="#17130F" transform="translate(12 12)"/>
+    <path d="M186 204 h224 v212 a112 34 0 0 1 -224 0 z" fill="#FFFDF8"/>
+    <ellipse cx="298" cy="204" rx="112" ry="34" fill="#4C7DFF"/>
+    <path d="M186 276 a112 34 0 0 0 224 0" fill="none"/>
+    <path d="M186 346 a112 34 0 0 0 224 0" fill="none"/>
+  </g>
+  <g stroke="#17130F" stroke-width="9" stroke-linejoin="round">
+    <rect x="806" y="192" width="150" height="150" rx="26" fill="#17130F" transform="translate(12 12)"/>
+    <rect x="806" y="192" width="150" height="150" rx="26" fill="#FFFDF8"/>
+    <rect x="900" y="266" width="150" height="150" rx="26" fill="#17130F" transform="translate(12 12)"/>
+    <rect x="900" y="266" width="150" height="150" rx="26" fill="#4C7DFF"/>
+    <rect x="760" y="290" width="150" height="150" rx="26" fill="#17130F" transform="translate(12 12)"/>
+    <rect x="760" y="290" width="150" height="150" rx="26" fill="#FFFDF8"/>
+  </g>
+  <circle cx="600" cy="520" r="18" fill="#4C7DFF" stroke="#17130F" stroke-width="8"/>
+  </g>
+</svg>

@@ -2,7 +2,7 @@
 title: "📚 Learning JavaScript step by step"
 description: "Now that the Bootcamp has started and I am revising JavaScript, I want to share how I am organising my learning and what I am discovering at this stage."
 pubDate: "Oct 01 2025"
-heroImage: "../../../assets/cover-capitulo8.jpeg"
+heroImage: "../../../assets/covers/ch07-four-blocks.png"
 chapter: 7
 category: codigo
 tags: ["JavaScript", "study method"]

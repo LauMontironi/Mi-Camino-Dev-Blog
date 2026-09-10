@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>A path through a maze, with one dead end</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <g stroke="#17130F" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M240 120 H960 M240 510 H960 M240 120 V270 M240 360 V510 M960 120 V270 M960 360 V510"/>
+    <path d="M420 120 V360 M600 270 V510 M780 120 V360"/>
+  </g>
+  <path d="M-20 315 H310 V450 H510 V190 H690 V430 H880 V315 H1232"
+        fill="none" stroke="#4C7DFF" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M420 300 H500" fill="none" stroke="#17130F" stroke-width="10" stroke-dasharray="6 22"
+        stroke-linecap="round" opacity="0.65"/>
+  <circle cx="300" cy="450" r="16" fill="#4C7DFF" stroke="#17130F" stroke-width="8"/><circle cx="900" cy="315" r="16" fill="#4C7DFF" stroke="#17130F" stroke-width="8"/>
+  </g>
+</svg>

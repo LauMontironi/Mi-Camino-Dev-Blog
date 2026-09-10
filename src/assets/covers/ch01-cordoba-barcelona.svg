@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>A continuous journey: Cordoba to Barcelona</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630" rx="0"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- CÓRDOBA: dome on a block, flat outline only -->
+  <rect x="162" y="364" width="124" height="96" fill="#17130F"/>
+  <g stroke="#17130F" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M150 448 v-96 h124 v96 z" fill="#FFFDF8"/>
+    <path d="M152 352 a60 48 0 0 1 120 0 z" fill="#FF8A5C"/>
+    <path d="M212 304 v-28"/>
+    <circle cx="212" cy="268" r="10" fill="#FFFDF8"/>
+    <path d="M186 448 v-54 a26 26 0 0 1 52 0 v54" fill="#FBF6EC"/>
+  </g>
+
+  <!-- BARCELONA: four tapering spires -->
+  <g stroke="#17130F" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" fill="#FFFDF8">
+    <path d="M872 448 V246 a26 26 0 0 1 52 0 v202z"/>
+    <path d="M934 448 V178 a30 30 0 0 1 60 0 v270z"/>
+    <path d="M1004 448 V224 a26 26 0 0 1 52 0 v224z"/>
+    <path d="M816 448 V292 a24 24 0 0 1 48 0 v156z"/>
+  </g>
+  <g fill="#FF8A5C" stroke="#17130F" stroke-width="6">
+    <circle cx="898" cy="228" r="13"/>
+    <circle cx="964" cy="158" r="14"/>
+    <circle cx="1030" cy="206" r="13"/>
+    <circle cx="840" cy="274" r="12"/>
+  </g>
+
+  <!-- THE PATH -->
+  <g fill="none" stroke="#17130F" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="9"
+      d="M-20 566 C 66 566, 116 552, 146 512
+         C 180 466, 122 428, 96 466
+         C 72 502, 124 546, 198 536
+         C 306 522, 392 512, 470 506"/>
+    <path stroke-width="9" stroke-dasharray="4 34"
+      d="M470 506 C 556 500, 588 476, 664 482 C 706 486, 706 500, 748 498"/>
+    <path stroke-width="9"
+      d="M748 498 C 840 494, 900 486, 968 470
+         C 1058 448, 1128 400, 1176 336
+         C 1204 300, 1216 282, 1232 258"/>
+  </g>
+
+  <!-- three stops on the path -->
+  <g fill="#FF8A5C" stroke="#17130F" stroke-width="7">
+    <circle cx="180" cy="538" r="17"/>
+    <circle cx="470" cy="506" r="17"/>
+    <circle cx="930" cy="478" r="17"/>
+  </g>
+
+  <!-- paper plane leaving at the top right -->
+  <g transform="translate(1104 214) rotate(-28)" stroke="#17130F" stroke-width="7"
+     stroke-linejoin="round" fill="#FFFDF8">
+    <path d="M0 0 L74 26 L34 40 L26 74 Z"/>
+    <path d="M74 26 L26 74" fill="none"/>
+  </g>
+  </g>
+</svg>

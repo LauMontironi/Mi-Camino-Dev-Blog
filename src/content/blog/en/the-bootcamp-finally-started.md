@@ -2,7 +2,7 @@
 title: "🎉 The Bootcamp finally started!"
 description: "The bootcamp begins: how I revised JavaScript, HTML and CSS before day one, and the tutorials that genuinely helped me."
 pubDate: "Sep 25 2025"
-heroImage: "../../../assets/cover-capitulo6.jpeg"
+heroImage: "../../../assets/covers/ch06-the-start-flag.png"
 chapter: 6
 category: bootcamp
 tags: ["bootcamp", "expectations"]

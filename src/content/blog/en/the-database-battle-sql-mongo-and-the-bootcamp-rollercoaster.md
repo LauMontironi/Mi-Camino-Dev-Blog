@@ -2,7 +2,7 @@
 title: "⚔️ The Battle of the Databases: SQL, Mongo and the Bootcamp Rollercoaster"
 description: "SQL and MongoDB at the bootcamp: the stress of not writing code any more, the console, and a genuine fascination with databases."
 pubDate: "Nov 02 2025"
-heroImage: "../../../assets/cover-capituloXI.png"
+heroImage: "../../../assets/covers/ch10-two-ways-to-hold-data.png"
 chapter: 10
 category: codigo
 tags: ["SQL", "MongoDB", "databases"]

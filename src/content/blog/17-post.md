@@ -2,7 +2,7 @@
 title: "🎓 El final del bootcamp, el comienzo de mi verdadero camino tech"
 description: "Cuando terminar de estudiar es, en realidad, empezar de verdad"
 pubDate: "Feb 26 2026"
-heroImage: "../../assets/fin-bootcamp.jpeg"
+heroImage: "../../assets/covers/ch17-finish-is-a-start.png"
 chapter: 17
 category: bootcamp
 tags: ["fin del bootcamp"]

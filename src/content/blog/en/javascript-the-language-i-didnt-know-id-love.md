@@ -2,7 +2,7 @@
 title: "🟨 JavaScript: the language I did not know I was going to love"
 description: "We wrapped up the JavaScript module and something I did not expect happened: I love it. From feeling like I was writing hieroglyphs to actually enjoying it."
 pubDate: "Oct 15 2025"
-heroImage: "../../../assets/cover-capituloX.png"
+heroImage: "../../../assets/covers/ch08-split-and-rejoin.png"
 chapter: 8
 category: codigo
 tags: ["JavaScript"]

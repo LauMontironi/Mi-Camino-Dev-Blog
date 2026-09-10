@@ -2,7 +2,7 @@
 title: "🚧 En el mientras tanto"
 description: "Construyendo dos proyectos a la vez: trabajar en equipo y construir un SaaS desde cero."
 pubDate: "Mar 09 2026"
-heroImage: "../../assets/buildingwhilelearning.png"
+heroImage: "../../assets/covers/ch19-two-projects.png"
 chapter: 19
 category: trabajo
 tags: ["SaaS", "trabajo en equipo"]

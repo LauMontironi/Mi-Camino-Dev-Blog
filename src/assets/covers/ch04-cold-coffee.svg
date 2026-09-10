@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>The path loops on itself beside a cold coffee</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <path d="M-20 470 C 98 470, 126 458, 148 426 C 172 386, 128 358, 105 388 C 84 416, 122 452, 178 446 C 212 442, 240 440, 270 438 C 318 438, 346 426, 368 394 C 392 354, 348 326, 325 356 C 304 384, 342 420, 398 414 C 432 410, 460 408, 490 406 C 538 406, 566 394, 588 362 C 612 322, 568 294, 545 324 C 524 352, 562 388, 618 382 C 652 378, 680 376, 710 374  H760" fill="none" stroke="#17130F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="960" cy="500" rx="128" ry="26" fill="none" stroke="#FF8A5C" stroke-width="10"/>
+  <rect x="884" y="290" width="164" height="196" rx="26" fill="#17130F"/>
+  <rect x="872" y="278" width="164" height="196" rx="26" fill="#FFFDF8" stroke="#17130F" stroke-width="9"/>
+  <path d="M1036 322 a44 44 0 0 1 0 88" fill="none" stroke="#17130F" stroke-width="9"/>
+  <rect x="890" y="296" width="128" height="46" rx="12" fill="#FF8A5C"/>
+  <circle cx="760" cy="374" r="18" fill="#FF8A5C" stroke="#17130F" stroke-width="8"/>
+  </g>
+</svg>

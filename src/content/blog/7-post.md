@@ -2,7 +2,7 @@
 title: "📚 Aprendiendo JavaScript paso a paso"
 description: "Ahora que el Bootcamp ha arrancado y estoy repasando JavaScript, quiero compartir cómo estoy organizando mi aprendizaje y qué estoy descubriendo en esta fase."
 pubDate: "Oct 01 2025"
-heroImage: "../../assets/cover-capitulo8.jpeg"
+heroImage: "../../assets/covers/ch07-four-blocks.png"
 chapter: 7
 category: codigo
 tags: ["JavaScript", "método de estudio"]

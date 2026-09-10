@@ -2,7 +2,7 @@
 title: "From 0 to 100"
 description: "Two weeks into my new job and the feeling of learning faster than ever."
 pubDate: "Jun 11 2026"
-heroImage: "../../../assets/cover22.jpg"
+heroImage: "../../../assets/covers/ch22-zero-to-a-hundred.png"
 chapter: 22
 category: trabajo
 tags: ["Ruby", "onboarding", "fintech"]

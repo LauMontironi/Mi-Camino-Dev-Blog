@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>A pause in the path, then a click</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <rect x="452" y="248" width="46" height="176" rx="14" fill="#17130F"/>
+  <rect x="440" y="236" width="46" height="176" rx="14" fill="#FF8A5C" stroke="#17130F" stroke-width="9"/>
+  <rect x="562" y="248" width="46" height="176" rx="14" fill="#17130F"/>
+  <rect x="550" y="236" width="46" height="176" rx="14" fill="#FF8A5C" stroke="#17130F" stroke-width="9"/>
+  <path d="M-20 400 H400" fill="none" stroke="#17130F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M648 400 H900 C 960 400, 986 380, 1006 344" fill="none" stroke="#17130F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="648" cy="400" r="18" fill="#FF8A5C" stroke="#17130F" stroke-width="8"/>
+  <g transform="translate(1004 330) rotate(14)">
+    <path d="M12 12 L12 126 L44 96 L66 142 L96 126 L74 82 L116 76 Z" fill="#17130F"/>
+    <path d="M0 0 L0 114 L32 84 L54 130 L84 114 L62 70 L104 64 Z" fill="#FFFDF8" stroke="#17130F"
+          stroke-width="9" stroke-linejoin="round"/>
+  </g>
+  </g>
+</svg>

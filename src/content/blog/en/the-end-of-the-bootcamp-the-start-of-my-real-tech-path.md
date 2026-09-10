@@ -2,7 +2,7 @@
 title: "🎓 The end of the bootcamp, the beginning of my real tech path"
 description: "When finishing your studies is, in fact, the real beginning"
 pubDate: "Feb 26 2026"
-heroImage: "../../../assets/fin-bootcamp.jpeg"
+heroImage: "../../../assets/covers/ch17-finish-is-a-start.png"
 chapter: 17
 category: bootcamp
 tags: ["end of bootcamp"]

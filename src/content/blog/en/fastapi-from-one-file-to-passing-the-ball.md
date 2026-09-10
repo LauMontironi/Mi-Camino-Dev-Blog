@@ -2,7 +2,7 @@
 title: "🤯 FastAPI: From a single file to 'Passing the Ball' (My Survival Cheat Sheet) 🐍"
 description: "From a single main.py to separating responsibilities in FastAPI: my survival cheat sheet for not overcomplicating things (and overcomplicating them anyway)."
 pubDate: "Nov 10 2025"
-heroImage: "../../../assets/cover-capituloXII.png"
+heroImage: "../../../assets/covers/ch11-the-project-tree.png"
 chapter: 11
 category: codigo
 tags: ["FastAPI", "Python", "architecture"]

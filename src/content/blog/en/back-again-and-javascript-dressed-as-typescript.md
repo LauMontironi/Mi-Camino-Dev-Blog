@@ -2,7 +2,7 @@
 title: "I am back again… and JS (dressed up as TS) laughing in my face 😈"
 description: "The challenge of switching my brain from Python to Angular, and the start of my Family Schedule project."
 pubDate: "Jan 20 2026"
-heroImage: "../../../assets/cover-capituloxv.png"
+heroImage: "../../../assets/covers/ch14-one-file-becomes-many.png"
 chapter: 14
 category: codigo
 tags: ["TypeScript", "Angular"]

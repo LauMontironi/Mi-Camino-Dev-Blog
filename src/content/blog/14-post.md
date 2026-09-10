@@ -2,7 +2,7 @@
 title: "De nuevo estoy de vuelta… y JS (disfrazado de TS) riéndose en mi cara 😈"
 description: "El reto de cambiar el chip de Python a Angular y el inicio de mi proyecto Family Schedule."
 pubDate: "Jan 20 2026"
-heroImage: "../../assets/cover-capituloxv.png"
+heroImage: "../../assets/covers/ch14-one-file-becomes-many.png"
 chapter: 14
 category: codigo
 tags: ["TypeScript", "Angular"]

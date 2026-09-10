@@ -2,7 +2,7 @@
 title: "🚀 Building my first SaaS with FastAPI and PostgreSQL: the real errors that almost broke my backend"
 description: "💡 What I learned building a course platform while I am still learning web development."
 pubDate: "Mar 17 2026"
-heroImage: "../../../assets/saas.png"
+heroImage: "../../../assets/covers/ch20-uuid-integer.png"
 chapter: 20
 category: codigo
 tags: ["FastAPI", "PostgreSQL", "SaaS"]

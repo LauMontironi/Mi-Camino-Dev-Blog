@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>A steep climb, accelerating</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <g stroke="#17130F" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.85"><path d="M70 505.79999999999995 L86 557.8"/><path d="M180 459.6 L196 511.6"/><path d="M278 418.44 L294 470.44"/><path d="M364 382.32 L380 434.32"/><path d="M438 351.24 L454 403.24"/><path d="M500 325.20000000000005 L516 377.20000000000005"/><path d="M552 303.36 L568 355.36"/><path d="M596 284.88 L612 336.88"/><path d="M634 268.92 L650 320.92"/><path d="M668 254.64 L684 306.64"/><path d="M698 242.04000000000002 L714 294.04"/><path d="M724 231.12 L740 283.12"/><path d="M748 221.04000000000002 L764 273.04"/><path d="M770 211.8 L786 263.8"/><path d="M790 203.40000000000003 L806 255.40000000000003"/><path d="M808 195.84000000000003 L824 247.84000000000003"/></g>
+  <path d="M-20 566 C 200 512, 520 452, 720 356 C 880 280, 980 190, 1050 96" fill="none" stroke="#17130F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1050 96 l-8 74 l72 -30 z" fill="#6FDCA8" stroke="#17130F" stroke-width="9"
+        stroke-linejoin="round" transform="rotate(-38 1050 96)"/>
+  <circle cx="70" cy="540" r="16" fill="#6FDCA8" stroke="#17130F" stroke-width="8"/>
+  </g>
+</svg>

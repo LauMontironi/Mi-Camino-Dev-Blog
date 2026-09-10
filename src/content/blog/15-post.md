@@ -2,7 +2,7 @@
 title: "🌍⚡ Conectar Angular con el mundo real y sobrevivir"
 description: "Del caos técnico al clic mental: cómo pasé de entender Angular en teoría a hacerlo hablar con APIs reales, manejar errores de autenticación y sentir que por fin todo encaja."
 pubDate: "Feb 01 2026"
-heroImage: "../../assets/family-app-preview.jpg"
+heroImage: "../../assets/covers/ch15-family-scheduler.png"
 chapter: 15
 category: codigo
 tags: ["Angular", "APIs", "auth"]

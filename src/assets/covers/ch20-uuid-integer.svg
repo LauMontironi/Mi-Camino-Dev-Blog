@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>The real Postgres type-mismatch error, framed</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630" rx="0"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- path passes behind the artifact: knotted on the left, straight on the right -->
+  <g fill="none" stroke="#17130F" stroke-width="9" stroke-linecap="round">
+    <path d="M-20 470 C 46 470, 78 470, 104 452
+             C 134 430, 96 398, 74 424
+             C 54 448, 92 478, 148 476
+             C 190 474, 214 468, 244 462"/>
+    <path d="M956 462 C 1044 462, 1120 462, 1232 462"/>
+  </g>
+  <circle cx="244" cy="462" r="17" fill="#4C7DFF" stroke="#17130F" stroke-width="7"/>
+
+  <!-- terminal card: hard offset shadow, then the card -->
+  <rect x="196" y="152" width="820" height="336" rx="22" fill="#17130F"/>
+  <rect x="184" y="140" width="820" height="336" rx="22" fill="#FFFDF8" stroke="#17130F" stroke-width="8"/>
+
+  <!-- title bar -->
+  <path d="M184 208 h820" stroke="#17130F" stroke-width="8"/>
+  <g stroke="#17130F" stroke-width="6">
+    <circle cx="230" cy="174" r="13" fill="#FF5D8F"/>
+    <circle cx="272" cy="174" r="13" fill="#FFC63C"/>
+    <circle cx="314" cy="174" r="13" fill="#6FDCA8"/>
+  </g>
+
+  <!-- category tab (no text) -->
+  <rect x="880" y="112" width="104" height="56" rx="16" fill="#4C7DFF" stroke="#17130F" stroke-width="8"/>
+
+  <!-- the real error, verbatim from the article, wrapped for legibility -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+     font-size="52" font-weight="700" fill="#17130F">
+    <text x="232" y="316">operator does not exist:</text>
+    <text x="232" y="392">uuid = integer</text>
+  </g>
+  <!-- blue underline marks the two mismatched types -->
+  <path d="M232 410 h176" stroke="#4C7DFF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M464 410 h196" stroke="#FF5D8F" stroke-width="12" stroke-linecap="round"/>
+  <!-- cursor block -->
+  <rect x="676" y="352" width="26" height="48" fill="#17130F"/>
+  </g>
+</svg>

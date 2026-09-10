@@ -2,7 +2,7 @@
 title: "💻☕Empezando a transitar el cambio"
 description: "El prework de Upgrade Hub y el choque de aprender a estudiar programación viniendo de la escuela de los libros."
 pubDate: "Sep 01 2025"
-heroImage: "../../assets/cover-capitulo5.png"
+heroImage: "../../assets/covers/ch05-book-to-screen.png"
 chapter: 5
 category: camino
 tags: ["primeros pasos", "bootcamp"]

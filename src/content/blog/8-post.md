@@ -2,7 +2,7 @@
 title: "🟨JavaScript: el lenguaje que no sabía que me iba a encantar"
 description: "Cerramos el módulo de JavaScript y pasó algo que no esperaba: me encanta. De sentir que escribía jeroglíficos a disfrutarlo."
 pubDate: "Oct 15 2025"
-heroImage: "../../assets/cover-capituloX.png"
+heroImage: "../../assets/covers/ch08-split-and-rejoin.png"
 chapter: 8
 category: codigo
 tags: ["JavaScript"]

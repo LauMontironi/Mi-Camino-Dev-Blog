@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>A staircase with one step missing</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <path d="M300 404 H420 V344" fill="none" stroke="#17130F" stroke-width="9"
+        stroke-dasharray="6 26" stroke-linecap="round" opacity="0.6"/>
+  <path d="M-20 524 H120 V464 H240 V404 H300 V500" fill="none" stroke="#17130F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M300 500 H430 V440 H560 V380 H690 V320 H820 V260 H950 V200 H1232" fill="none" stroke="#17130F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="120" cy="464" r="18" fill="#FF8A5C" stroke="#17130F" stroke-width="8"/><circle cx="300" cy="500" r="18" fill="#FF8A5C" stroke="#17130F" stroke-width="8"/><circle cx="690" cy="320" r="18" fill="#FF8A5C" stroke="#17130F" stroke-width="8"/><circle cx="950" cy="200" r="18" fill="#FF8A5C" stroke="#17130F" stroke-width="8"/>
+  </g>
+</svg>

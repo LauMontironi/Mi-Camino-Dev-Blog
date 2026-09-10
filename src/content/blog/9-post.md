@@ -2,7 +2,7 @@
 title: "🐍 Querido Python:"
 description: "Una carta de amor (y de sintaxis confusa) a Python, escrita por alguien que venía de JavaScript y del mito del lenguaje fácil."
 pubDate: "Oct 16 2025"
-heroImage: "../../assets/cover-capitulo9.jpeg"
+heroImage: "../../assets/covers/ch09-the-path-becomes-a-snake.png"
 chapter: 9
 category: codigo
 tags: ["Python"]

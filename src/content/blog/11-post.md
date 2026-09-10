@@ -2,7 +2,7 @@
 title: "🤯 FastAPI: De un solo archivo a 'Pasar la Bola' (Mi Chuleta de Supervivencia) 🐍"
 description: "De un solo main.py a separar responsabilidades en FastAPI: mi chuleta de supervivencia para no complicarme (y complicarme igual)."
 pubDate: "Nov 10 2025"
-heroImage: "../../assets/cover-capituloXII.png"
+heroImage: "../../assets/covers/ch11-the-project-tree.png"
 chapter: 11
 category: codigo
 tags: ["FastAPI", "Python", "arquitectura"]

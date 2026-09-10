@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>The path coils into a snake</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <path d="M-20 540 C 140 540, 200 470, 200 400 C 200 320, 300 270, 420 300 C 540 330, 560 430, 680 452 C 800 474, 880 420, 900 330" fill="none" stroke="#17130F" stroke-width="46" stroke-linecap="round"/>
+  <path d="M-20 540 C 140 540, 200 470, 200 400 C 200 320, 300 270, 420 300 C 540 330, 560 430, 680 452 C 800 474, 880 420, 900 330" fill="none" stroke="#4C7DFF" stroke-width="28" stroke-linecap="round"/>
+  <g transform="translate(900 330) rotate(-58)">
+    <path d="M-32 -30 h44 a34 34 0 0 1 0 60 h-44 z" fill="#4C7DFF" stroke="#17130F" stroke-width="9"
+          stroke-linejoin="round"/>
+    <circle cx="-2" cy="-10" r="7" fill="#17130F"/>
+    <path d="M46 0 h34 m0 0 l18 -12 m-18 12 l18 12" fill="none" stroke="#17130F" stroke-width="8"
+          stroke-linecap="round"/>
+  </g>
+  </g>
+</svg>

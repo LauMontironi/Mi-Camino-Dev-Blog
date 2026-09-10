@@ -2,7 +2,7 @@
 title: "🫀 Re-start: When your brain says 'enough' so you can carry on"
 description: "A reflection on mental saturation and the importance of switching off."
 pubDate: "Nov 21 2025"
-heroImage: "../../../assets/dsconectar.png"
+heroImage: "../../../assets/covers/ch12-restart.png"
 chapter: 12
 category: camino
 tags: ["burnout", "mental health"]

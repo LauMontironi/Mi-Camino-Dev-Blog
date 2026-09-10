@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>The real project tree from the article</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <path d="M-20 486 H236" fill="none" stroke="#17130F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M964 486 H1232" fill="none" stroke="#17130F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="212" y="112" width="776" height="392" rx="22" fill="#17130F"/>
+  <rect x="200" y="100" width="776" height="392" rx="22" fill="#FFFDF8" stroke="#17130F" stroke-width="8"/>
+  <rect x="200" y="100" width="776" height="18" rx="9" fill="#4C7DFF"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+     font-size="42" font-weight="600" fill="#17130F" xml:space="preserve">
+    <text x="248" y="212">mi_app/</text>
+    <text x="248" y="266">├── app/</text>
+    <text x="248" y="320">│   ├── controllers/</text>
+    <text x="248" y="374">│   ├── models/</text>
+    <text x="248" y="428">│   ├── routes/</text>
+    <text x="248" y="482">│   └── main.py</text>
+  </g>
+  <circle cx="236" cy="486" r="18" fill="#4C7DFF" stroke="#17130F" stroke-width="8"/>
+  </g>
+</svg>

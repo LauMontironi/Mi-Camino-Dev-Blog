@@ -2,7 +2,7 @@
 title: "🪜 The step that changed my (working) life."
 description: "From textbooks to the office: my working life and that constant attempt at change and self-improvement, starting from a degree chosen without passion."
 pubDate: "Jul 15 2025"
-heroImage: "../../../assets/Elige tu camino profesional.png"
+heroImage: "../../../assets/covers/ch02-the-broken-step.png"
 chapter: 2
 category: camino
 tags: ["career change", "decisions"]

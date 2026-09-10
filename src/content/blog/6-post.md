@@ -2,7 +2,7 @@
 title: "🎉 ¡Por fin empezó el Bootcamp!"
 description: "Empieza el bootcamp: cómo repasé JavaScript, HTML y CSS antes del primer día, y los tutoriales que de verdad me ayudaron."
 pubDate: "Sep 25 2025"
-heroImage: "../../assets/cover-capitulo6.jpeg"
+heroImage: "../../assets/covers/ch06-the-start-flag.png"
 chapter: 6
 category: bootcamp
 tags: ["bootcamp", "expectativas"]

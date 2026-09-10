@@ -2,7 +2,7 @@
 title: "🚀 El día que dejé de 'practicar' y empecé a programar de verdad"
 description: "Proyecto final del bootcamp UpgradeHub: arquitectura real, deploy real, errores reales (sí, borré el repo) y una API completa funcionando en producción."
 pubDate: "Feb 16 2026"
-heroImage: "../../assets/upgrade_food.jpg"
+heroImage: "../../assets/covers/ch16-upgradefood.png"
 chapter: 16
 category: codigo
 tags: ["proyecto final", "deploy", "API"]

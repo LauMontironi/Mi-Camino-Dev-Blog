@@ -2,7 +2,7 @@
 title: "🥊 Boxea bien. El knock-out viene solo"
 description: "Cómo pasé de terminar un bootcamp a trabajar en backend en una fintech."
 pubDate: "Apr 24 2026"
-heroImage: "../../assets/hired2.png"
+heroImage: "../../assets/covers/ch21-the-door.png"
 chapter: 21
 category: trabajo
 tags: ["fintech", "backend", "contratada"]

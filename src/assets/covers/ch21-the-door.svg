@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img">
+  <title>The path draws its own door</title>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.1" fill="#E8DFCE"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="630" rx="0"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#FBF6EC"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- doorway: hard offset shadow, then the mint opening -->
+  <rect x="714" y="184" width="272" height="288" fill="#17130F"/>
+  <rect x="700" y="170" width="272" height="292" fill="#6FDCA8"/>
+  <!-- inner reveal: gives the opening depth without extra colour -->
+  <path d="M726 462 V196 H946 V462" fill="none" stroke="#17130F" stroke-width="5"
+        stroke-linejoin="round" opacity="0.55"/>
+
+  <!-- 40 tally marks: the applications actually sent -->
+  <g stroke="#17130F" stroke-width="7" stroke-linecap="round" fill="none">
+    <path d="M92 428 v58"/>
+    <path d="M108 428 v58"/>
+    <path d="M124 428 v58"/>
+    <path d="M140 428 v58"/>
+    <path d="M84 492 L148 422"/>
+    <path d="M164 428 v58"/>
+    <path d="M180 428 v58"/>
+    <path d="M196 428 v58"/>
+    <path d="M212 428 v58"/>
+    <path d="M156 492 L220 422"/>
+    <path d="M236 428 v58"/>
+    <path d="M252 428 v58"/>
+    <path d="M268 428 v58"/>
+    <path d="M284 428 v58"/>
+    <path d="M228 492 L292 422"/>
+    <path d="M308 428 v58"/>
+    <path d="M324 428 v58"/>
+    <path d="M340 428 v58"/>
+    <path d="M356 428 v58"/>
+    <path d="M300 492 L364 422"/>
+    <path d="M380 428 v58"/>
+    <path d="M396 428 v58"/>
+    <path d="M412 428 v58"/>
+    <path d="M428 428 v58"/>
+    <path d="M372 492 L436 422"/>
+    <path d="M452 428 v58"/>
+    <path d="M468 428 v58"/>
+    <path d="M484 428 v58"/>
+    <path d="M500 428 v58"/>
+    <path d="M444 492 L508 422"/>
+    <path d="M524 428 v58"/>
+    <path d="M540 428 v58"/>
+    <path d="M556 428 v58"/>
+    <path d="M572 428 v58"/>
+    <path d="M516 492 L580 422"/>
+    <path d="M596 428 v58"/>
+    <path d="M612 428 v58"/>
+    <path d="M628 428 v58"/>
+    <path d="M644 428 v58"/>
+    <path d="M588 492 L652 422"/>
+  </g>
+
+  <!-- THE PATH: runs in, rises, turns, draws the doorframe, and leaves -->
+  <path d="M-20 462 H700 V170 H972 V462 H1232"
+        fill="none" stroke="#17130F" stroke-width="12"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- the moment the line meets the door -->
+  <circle cx="700" cy="462" r="20" fill="#6FDCA8" stroke="#17130F" stroke-width="8"/>
+
+  <!-- two gloves hanging from the top rail -->
+  <g stroke="#17130F" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+    
+    <g transform="translate(812 236)">
+      <path d="M0 -66 V4" fill="none"/>
+      <rect x="-26" y="0" width="52" height="24" rx="9" fill="#FFFDF8"/>
+      <rect x="-36" y="24" width="72" height="62" rx="30" fill="#FF8A5C"/>
+      <path d="M-36 48 a15 15 0 0 0 -17 15 a11 11 0 0 0 17 9 z" fill="#FF8A5C"/>
+      <path d="M-30 40 h60" fill="none"/>
+    </g>
+    <g transform="translate(906 268)">
+      <path d="M0 -98 V4" fill="none"/>
+      <rect x="-26" y="0" width="52" height="24" rx="9" fill="#FFFDF8"/>
+      <rect x="-36" y="24" width="72" height="62" rx="30" fill="#FF8A5C"/>
+      <path d="M-36 48 a15 15 0 0 0 -17 15 a11 11 0 0 0 17 9 z" fill="#FF8A5C"/>
+      <path d="M-30 40 h60" fill="none"/>
+    </g>
+  </g>
+  </g>
+</svg>

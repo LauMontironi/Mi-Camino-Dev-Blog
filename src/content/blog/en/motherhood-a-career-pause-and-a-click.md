@@ -2,7 +2,7 @@
 title: "🌱 Motherhood, the career pause… and a click"
 description: "Guilt, doubts and an emotional whirlwind: motherhood, depersonalisation and the questions I could no longer keep ignoring."
 pubDate: "Jul 22 2025"
-heroImage: "../../../assets/cover-capitulo3.png"
+heroImage: "../../../assets/covers/ch03-pause-and-click.png"
 chapter: 3
 category: camino
 tags: ["motherhood", "career break"]

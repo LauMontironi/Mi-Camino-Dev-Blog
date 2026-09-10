@@ -2,7 +2,7 @@
 title: "Pasar de 0 a 100"
 description: "Dos semanas en mi nuevo trabajo y la sensación de estar aprendiendo más rápido que nunca."
 pubDate: "Jun 11 2026"
-heroImage: "../../assets/cover22.jpg"
+heroImage: "../../assets/covers/ch22-zero-to-a-hundred.png"
 chapter: 22
 category: trabajo
 tags: ["Ruby", "onboarding", "fintech"]
