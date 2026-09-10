@@ -1,8 +1,15 @@
 ---
-title: "# 11 # 🤯 FastAPI: De un solo archivo a 'Pasar la Bola' (Mi Chuleta de Supervivencia) 🐍 "
-description: ""
+title: "🤯 FastAPI: De un solo archivo a 'Pasar la Bola' (Mi Chuleta de Supervivencia) 🐍"
+description: "De un solo main.py a separar responsabilidades en FastAPI: mi chuleta de supervivencia para no complicarme (y complicarme igual)."
 pubDate: "Nov 10 2025"
 heroImage: "../../assets/cover-capituloXII.png"
+chapter: 11
+category: codigo
+tags: ["FastAPI", "Python", "arquitectura"]
+lang: es
+translationKey: "11-fastapi-de-un-solo-archivo"
+draft: false
+featured: false
 ---
 
 Hemos empezado a ver FastAPI en el bootcamp. Al
@@ -78,11 +85,11 @@ mi_app/
 
 Crear la burbuja para que no explote nada fuera
 
-# Crear el entorno
+## Crear el entorno
 
 python -m venv .venv
 
-# Activar el entorno (Ojo a la ruta en Git Bash)
+## Activar el entorno (Ojo a la ruta en Git Bash)
 
 source .venv/Scripts/activate
 
@@ -108,7 +115,7 @@ from routes import ejemplo_routes # Importamos el archivo de rutas
 
 app = FastAPI()
 
-# Conectamos la "regleta" de rutas al enchufe principal
+## Conectamos la "regleta" de rutas al enchufe principal
 
 app.include_router(ejemplo_routes.router, prefix='/ejemplo', tags=['ejemplo'])
 
@@ -132,7 +139,7 @@ router = APIRouter()
 
 def get_algo():
 
-# Le pasamos la bola al controlador
+## Le pasamos la bola al controlador
 
 return ejemplo_controller.traer_datos()
 
@@ -148,7 +155,7 @@ from models.ejemplo_model import get_all_data # Importamos del modelo
 
 def traer_datos():
 
-# Aquí iría la lógica...
+## Aquí iría la lógica...
 
 return get_all_data()
 

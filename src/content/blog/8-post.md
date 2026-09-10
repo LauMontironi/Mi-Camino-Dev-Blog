@@ -1,8 +1,15 @@
 ---
-title: "# 8 # # 🟨**JavaScript: el lenguaje que no sabía que me iba a encantar** "
-description: ""
+title: "🟨JavaScript: el lenguaje que no sabía que me iba a encantar"
+description: "Cerramos el módulo de JavaScript y pasó algo que no esperaba: me encanta. De sentir que escribía jeroglíficos a disfrutarlo."
 pubDate: "Oct 15 2025"
 heroImage: "../../assets/cover-capituloX.png"
+chapter: 8
+category: codigo
+tags: ["JavaScript"]
+lang: es
+translationKey: "8-javascript-el-lenguaje-que-no"
+draft: false
+featured: false
 ---
 
 Hoy cerramos oficialmente el módulo de JavaScript y, honestamente, no sé qué me ha pasado… **pero creo que me encanta JavaScript** 😅.

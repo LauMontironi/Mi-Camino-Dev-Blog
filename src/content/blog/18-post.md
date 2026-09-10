@@ -1,8 +1,15 @@
 ---
-title: "# 18 # 🔍 Buscar trabajo también es un trabajo (y nadie te prepara para eso)"
+title: "🔍 Buscar trabajo también es un trabajo (y nadie te prepara para eso)"
 description: "Y yo lo estoy aprendiendo a las malas."
 pubDate: "Mar 02 2026"
 heroImage: "../../assets/imagen_para_astro.png"
+chapter: 18
+category: trabajo
+tags: ["búsqueda de empleo"]
+lang: es
+translationKey: "18-buscar-trabajo-tambien-es-un"
+draft: false
+featured: false
 ---
 
 Terminar el bootcamp fue raro.

@@ -1,8 +1,15 @@
 ---
-title: "# 6 # 🎉 ¡Por fin empezó el Bootcamp!"
-description: ""
+title: "🎉 ¡Por fin empezó el Bootcamp!"
+description: "Empieza el bootcamp: cómo repasé JavaScript, HTML y CSS antes del primer día, y los tutoriales que de verdad me ayudaron."
 pubDate: "Sep 25 2025"
 heroImage: "../../assets/cover-capitulo6.jpeg"
+chapter: 6
+category: bootcamp
+tags: ["bootcamp", "expectativas"]
+lang: es
+translationKey: "6-por-fin-empezo-el-bootcamp"
+draft: false
+featured: false
 ---
 
 Antes de comenzar, decidí dedicarme a repasar y aprender mejor **JavaScript**, además de reforzar lo que ya sabía de **HTML y CSS**. Hay algunos tutoriales en YouTube que me ayudaron mucho y que recomiendo:
@@ -24,7 +31,7 @@ pidiendo ejercicios guiados, comentando resultados y practicando tanto
 con Bootstrap como sin él. También hice pequeños retos de Frontend
 Mentor, aunque aún no los subí a GitHub (aun )
 
-# 💻 Primeras clases del Bootcamp
+## 💻 Primeras clases del Bootcamp
 
 De momento hemos repasado **HTML y CSS**.
 
@@ -37,7 +44,7 @@ El **trabajo final del módulo 1** era crear una landing page con HTML y CSS. Lo
 
 ---
 
-# 🚀 Próximo reto: JavaScript
+## 🚀 Próximo reto: JavaScript
 
 - Aquí empieza la parte **complicada del Bootcamp**, con funciones, operadores, bucles y ejercicios de lógica.
 - Personalmente, me siento como si estuviera estudiando matemáticas avanzadas: por ejemplo, contar números pares del 1 al 1000, pintar
@@ -47,7 +54,7 @@ Sé que **tiene sentido práctico**, aunque ahora mismo parezca abstracto: detr�
 
 Mientras tanto, sigo practicando con retos de Frontend Mentor y ahora los estoy publicando, aunque con mucha vergüenza 😅.
 
-# 📊 Cómo estoy organizando el aprendizaje
+## 📊 Cómo estoy organizando el aprendizaje
 
 He dividido los contenidos mentalmente en partes:
 
@@ -59,7 +66,7 @@ Mientras tanto, sigo haciendo ejercicios prácticos por mi cuenta, experimentand
 
 ---
 
-# 💡 Reflexión
+## 💡 Reflexión
 
 Del Bootcamp puedo decir que:
 
@@ -71,7 +78,7 @@ Del Bootcamp puedo decir que:
 
 ---
 
-# ✨ Próximos pasos
+## ✨ Próximos pasos
 
 - Estudiar **JavaScript en serio**, especialmente lógica, bucles y funciones.
 - Aplicar ejercicios guiados y mini proyectos para consolidar conocimientos.

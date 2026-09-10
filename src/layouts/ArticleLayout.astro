@@ -1,0 +1,114 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from './BaseLayout.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import '../styles/article.css';
+import { CATEGORIES, formatDate, readingTime, type CategoryKey } from '../lib/posts';
+
+interface Props {
+  entry: any;
+  headings: { depth: number; slug: string; text: string }[];
+  prev: { href: string; title: string } | null;
+  next: { href: string; title: string } | null;
+}
+
+const { entry, headings, prev, next } = Astro.props;
+const d = entry.data;
+const category = CATEGORIES[d.category as CategoryKey];
+const minutes = readingTime(entry.body);
+
+/**
+ * A table of contents has to earn its place:
+ * a long TECHNICAL post with code. Narrative posts get none.
+ */
+const showToc =
+  d.category === 'codigo' &&
+  headings.filter((h) => h.depth === 2).length >= 6 &&
+  /```/.test(entry.body ?? '');
+---
+
+<BaseLayout
+  title={`${d.title} | Lau | Mi camino Dev-Blog`}
+  description={d.description}
+  current="blog"
+  bodyClass="is-article"
+  image={d.heroImage}
+  type="article"
+>
+  <div class="read-bar" id="read-bar"></div>
+
+  <main class="article">
+    <div class="article__inner">
+      <a class="article__back" href="/blog/">← Volver al blog</a>
+
+      <div class="article__meta">
+        <a class={`cat ${category.className}`} href={`/blog/?cat=${d.category}`}>
+          <span aria-hidden="true">{category.emoji}</span> {category.label}
+        </a>
+        {d.chapter && <span class="post__chapter">Capítulo #{d.chapter}</span>}
+      </div>
+
+      <h1 class="article__title">{d.title}</h1>
+
+      {d.description && <p class="article__standfirst">{d.description}</p>}
+
+      <p class="article__byline">
+        <span>Laura Montironi</span>
+        <span>{formatDate(d.pubDate)}</span>
+        <span>{minutes} min de lectura</span>
+      </p>
+    </div>
+
+    {d.heroImage && (
+      <figure class="article__hero">
+        <Image src={d.heroImage} alt="" width={1200} />
+      </figure>
+    )}
+
+    {showToc && <TableOfContents headings={headings} />}
+
+    <!-- .prose sets its own measure so pull quotes, the stat strip,
+         code and figures can break out of it. -->
+    <div class="prose">
+      <slot />
+    </div>
+
+    <div class="article__end">
+      {d.tags.length > 0 && (
+        <div>
+          <p class="article__tagline">Temas</p>
+          <div class="article__tags">
+            {d.tags.map((t: string) => <span class="tag">#{t}</span>)}
+          </div>
+        </div>
+      )}
+
+      <nav class="pager" aria-label="Más capítulos">
+        {prev && (
+          <a href={prev.href}>
+            <span class="pager__label">← Capítulo anterior</span>
+            <span class="pager__title">{prev.title}</span>
+          </a>
+        )}
+        {next && (
+          <a href={next.href}>
+            <span class="pager__label">Capítulo siguiente →</span>
+            <span class="pager__title">{next.title}</span>
+          </a>
+        )}
+      </nav>
+    </div>
+  </main>
+</BaseLayout>
+
+<script>
+  const bar = document.getElementById('read-bar');
+  const update = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+    if (bar) bar.style.width = `${pct}%`;
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+</script>

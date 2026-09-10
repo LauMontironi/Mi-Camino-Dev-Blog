@@ -1,0 +1,19 @@
+---
+/**
+ * ES / EN control.
+ * Spanish is the only language for now, so the EN side is visibly present
+ * but disabled — it never navigates and never 404s. The i18n phase will
+ * turn this into real links to the paired translation.
+ */
+---
+
+<div class="p-lang" role="group" aria-label="Idioma / Language">
+  <button type="button" data-lang="es" aria-pressed="true">ES</button>
+  <button
+    type="button"
+    data-lang="en"
+    aria-pressed="false"
+    aria-disabled="true"
+    title="English coming soon"
+  >EN</button>
+</div>

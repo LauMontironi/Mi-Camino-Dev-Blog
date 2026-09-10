@@ -1,8 +1,15 @@
 ---
-title: "# 13 # 🚀 Angular y el laberinto tech: con IA todo es mejor!  "
-description: ""
+title: "🚀 Angular y el laberinto tech: con IA todo es mejor!"
+description: "Angular después de las Navidades: estuve a punto de abandonar el bootcamp y cómo la IA me ayudó a volver a engancharme."
 pubDate: "Jan 08 2026"
 heroImage: "../../assets/cover-capituloXIV.png"
+chapter: 13
+category: codigo
+tags: ["Angular", "IA"]
+lang: es
+translationKey: "13-angular-y-el-laberinto-tech"
+draft: false
+featured: false
 ---
 
 Toca el turno a Angular y ya podría decir que estoy oficialmente full metida en el bootcamp de nuevo 💻🔥.

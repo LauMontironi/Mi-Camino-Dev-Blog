@@ -1,11 +1,16 @@
 ---
-title: "# 22 # Pasar de 0 a 100"
+title: "Pasar de 0 a 100"
 description: "Dos semanas en mi nuevo trabajo y la sensación de estar aprendiendo más rápido que nunca."
 pubDate: "Jun 11 2026"
 heroImage: "../../assets/cover22.jpg"
+chapter: 22
+category: trabajo
+tags: ["Ruby", "onboarding", "fintech"]
+lang: es
+translationKey: "22-pasar-de-0-a-100"
+draft: false
+featured: false
 ---
-
-# 🚄 Pasar de 0 a 100
 
 Llevo apenas dos semanas en mi nuevo trabajo y siento que he pasado de 0 a 100 de golpe.
 

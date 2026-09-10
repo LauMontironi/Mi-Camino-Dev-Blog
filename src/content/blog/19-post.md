@@ -1,8 +1,15 @@
 ---
-title: "# 19 # 🚧 En el mientras tanto"
+title: "🚧 En el mientras tanto"
 description: "Construyendo dos proyectos a la vez: trabajar en equipo y construir un SaaS desde cero."
 pubDate: "Mar 09 2026"
 heroImage: "../../assets/buildingwhilelearning.png"
+chapter: 19
+category: trabajo
+tags: ["SaaS", "trabajo en equipo"]
+lang: es
+translationKey: "19-en-el-mientras-tanto"
+draft: false
+featured: false
 ---
 
 En esta etapa de mi aprendizaje estoy trabajando en dos proyectos bastante diferentes entre sí, pero que se complementan mucho en todo lo que estoy aprendiendo.

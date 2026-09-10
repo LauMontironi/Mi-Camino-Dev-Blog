@@ -1,11 +1,18 @@
 ---
-title: "# 21 # 🥊 Boxea bien. El knock-out viene solo"
+title: "🥊 Boxea bien. El knock-out viene solo"
 description: "Cómo pasé de terminar un bootcamp a trabajar en backend en una fintech."
 pubDate: "Apr 24 2026"
 heroImage: "../../assets/hired2.png"
+chapter: 21
+category: trabajo
+tags: ["fintech", "backend", "contratada"]
+lang: es
+translationKey: "21-boxea-bien-el-knock-out"
+draft: false
+featured: true
 ---
 
-# 🚀 Cerrar un ciclo (y abrir otro)
+## 🚀 Cerrar un ciclo (y abrir otro)
 
 Lo prometido es deuda.
 
@@ -64,10 +71,13 @@ Y creo que logré transformarla en mi activo de personal branding más valioso.
 
 Estas estadísticas son de aproximadamente mes y medio después de terminar el bootcamp y empezar la búsqueda activa:
 
-- 📩 Más de 40 aplicaciones enviadas
-- 👥 Más de 30 recruiters contactados directamente
-- 💬 Aproximadamente 9 respuestas recibidas
-- 📞 4 procesos con entrevista técnica
+<div class="stat-strip">
+  <div><b>+40</b><span>aplicaciones enviadas</span></div>
+  <div><b>+30</b><span>recruiters contactados directamente</span></div>
+  <div><b>~9</b><span>respuestas recibidas</span></div>
+  <div><b>4</b><span>procesos con entrevista técnica</span></div>
+</div>
+
 - 🧪 Varios procesos con challenges técnicos incluidos
 - ⏳ Decenas de horas haciendo proyectos personales practicando y consolidando lo aprendido
 - 🧱 Días completamente bloqueada sin entender nada

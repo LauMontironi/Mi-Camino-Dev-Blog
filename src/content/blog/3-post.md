@@ -1,8 +1,15 @@
 ---
-title: "# 3 # 🌱La maternidad, la pausa laboral… y un clic"
-description: ""
+title: "🌱La maternidad, la pausa laboral… y un clic"
+description: "Culpa, dudas y un torbellino emocional: la maternidad, la despersonalización y las preguntas que ya no podía seguir ignorando."
 pubDate: "Jul 22 2025"
 heroImage: "../../assets/cover-capitulo3.png"
+chapter: 3
+category: camino
+tags: ["maternidad", "pausa"]
+lang: es
+translationKey: "3-la-maternidad-la-pausa-laboral"
+draft: false
+featured: false
 ---
 
 ## 😵‍💫Culpa, dudas y un torbellino emocional

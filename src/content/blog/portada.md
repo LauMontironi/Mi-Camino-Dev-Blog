@@ -1,8 +1,14 @@
 ---
-title: "# Aprendiendo a programar desde CERO SIN RENDIRME "
+title: "Aprendiendo a programar desde CERO SIN RENDIRME"
 description: "📚 Diario de una aprendiz de código - Indice"
 pubDate: "sep 28 2026"
 heroImage: "../../assets/Hero.png"
+category: camino
+tags: ["índice"]
+lang: es
+translationKey: "indice"
+draft: false
+featured: false
 ---
 
 📚 Diario de una aprendiz de código

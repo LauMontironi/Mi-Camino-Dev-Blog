@@ -1,8 +1,15 @@
 ---
-title: "# 2 #🪜El paso que me cambió la vida (laboral). "
-description: "Lorem ipsum dolor sit amet"
+title: "🪜El paso que me cambió la vida (laboral)."
+description: "De los libros a la oficina: mi recorrido laboral y ese intento constante de cambio y superación, desde una carrera elegida sin pasión."
 pubDate: "Jul 15 2025"
 heroImage: "../../assets/Elige tu camino profesional.png"
+chapter: 2
+category: camino
+tags: ["cambio de carrera", "decisiones"]
+lang: es
+translationKey: "2-el-paso-que-me-cambio"
+draft: false
+featured: false
 ---
 
 ## 🗃️ De los libros a la oficina: una elección sin pasión

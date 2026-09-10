@@ -1,8 +1,15 @@
 ---
-title: "# 20 # 🚀 Construyendo mi primer SaaS con FastAPI y PostgreSQL: los errores reales que casi rompen mi backend"
+title: "🚀 Construyendo mi primer SaaS con FastAPI y PostgreSQL: los errores reales que casi rompen mi backend"
 description: "💡 Lo que aprendí creando una plataforma de cursos mientras todavía estoy aprendiendo desarrollo web."
 pubDate: "Mar 17 2026"
 heroImage: "../../assets/saas.png"
+chapter: 20
+category: codigo
+tags: ["FastAPI", "PostgreSQL", "SaaS"]
+lang: es
+translationKey: "20-construyendo-mi-primer-saas-con"
+draft: false
+featured: false
 ---
 
 Lo que aprendí creando una plataforma de cursos mientras todavía estoy aprendiendo desarrollo web.

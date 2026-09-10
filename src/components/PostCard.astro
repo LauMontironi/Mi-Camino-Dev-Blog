@@ -1,0 +1,45 @@
+---
+import type { Post } from '../lib/posts';
+import { formatDate } from '../lib/posts';
+
+interface Props {
+  post: Post;
+  featured?: boolean;
+  tone?: string;
+  span?: string;
+  rowSpan?: boolean;
+}
+
+const { post, featured = false, tone = '', span = 'span-4', rowSpan = false } = Astro.props;
+
+const classes = [
+  'cell', 'post', span,
+  featured ? 'post--featured' : '',
+  rowSpan ? 'row-2' : '',
+  tone,
+].filter(Boolean).join(' ');
+---
+
+<a class={classes} href={post.href} data-category={post.categoryKey}>
+  <div>
+    <div class="post__top">
+      {post.chapter && <span class="post__chapter">#{post.chapter}</span>}
+      <span class="post__cat">{post.category.label}</span>
+    </div>
+
+    <h3 class="post__title">{post.title}</h3>
+
+    {post.description && <p class="post__desc">{post.description}</p>}
+
+    {featured && post.tags.length > 0 && (
+      <div class="tags" style="margin-top:0.8rem">
+        {post.tags.map((t) => <span class="tag">#{t}</span>)}
+      </div>
+    )}
+  </div>
+
+  <div class="post__foot">
+    <span>{formatDate(post.pubDate)} · {post.minutes} min</span>
+    <span class="post__arrow" aria-hidden="true">→</span>
+  </div>
+</a>

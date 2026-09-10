@@ -1,8 +1,15 @@
 ---
-title: "# 10 # ⚔️ La Batalla de las Bases de Datos: SQL, Mongo y la Montaña Rusa del Bootcamp "
-description: ""
+title: "⚔️ La Batalla de las Bases de Datos: SQL, Mongo y la Montaña Rusa del Bootcamp"
+description: "SQL y MongoDB en el bootcamp: el agobio de dejar de picar código, la consola y la fascinación por las bases de datos."
 pubDate: "Nov 02 2025"
 heroImage: "../../assets/cover-capituloXI.png"
+chapter: 10
+category: codigo
+tags: ["SQL", "MongoDB", "bases de datos"]
+lang: es
+translationKey: "10-la-batalla-de-las-bases"
+draft: false
+featured: false
 ---
 
 ¡Hola a todos! 👋

@@ -1,11 +1,18 @@
 ---
-title: "# 7 # 📚 Aprendiendo JavaScript paso a paso "
+title: "📚 Aprendiendo JavaScript paso a paso"
 description: "Ahora que el Bootcamp ha arrancado y estoy repasando JavaScript, quiero compartir cómo estoy organizando mi aprendizaje y qué estoy descubriendo en esta fase."
 pubDate: "Oct 01 2025"
 heroImage: "../../assets/cover-capitulo8.jpeg"
+chapter: 7
+category: codigo
+tags: ["JavaScript", "método de estudio"]
+lang: es
+translationKey: "7-aprendiendo-javascript-paso-a-paso"
+draft: false
+featured: false
 ---
 
-# 🧩 Dividiendo el aprendizaje en bloques
+## 🧩 Dividiendo el aprendizaje en bloques
 
 Para no abrumarme, dividí JS en varias partes mentales:
 
@@ -35,7 +42,7 @@ Para no abrumarme, dividí JS en varias partes mentales:
 
 ---
 
-# 🔢 La lógica y los cálculos
+## 🔢 La lógica y los cálculos
 
 - Algunos ejercicios me recuerdan **matemáticas**, y al principio me parece que no tienen sentido práctico.
 - Pero ahora entiendo que estos cálculos son la base de aplicaciones reales:
@@ -46,7 +53,7 @@ Para no abrumarme, dividí JS en varias partes mentales:
 
 ---
 
-# 💻 Mini proyectos y prácticas
+## 💻 Mini proyectos y prácticas
 
 Mientras tanto, sigo practicando fuera del Bootcamp:
 
@@ -62,14 +69,14 @@ Esto me ayuda a **conectar teoría y práctica** antes de que el Bootcamp avance
 
 ---
 
-# 📝 Organización y herramientas
+## 📝 Organización y herramientas
 
 - **Notion** se ha vuelto mi aliado: puedo pegar código, organizar apuntes y planificar prácticas.
 - Me ayuda a **tener todo en un solo lugar** y revisar conceptos cuando lo necesito.
 
 ---
 
-# ✨ Reflexiones del Bootcamp
+## ✨ Reflexiones del Bootcamp
 
 - Aunque la parte más lógica y matemática me parece complicada, sé que **es la base de todo desarrollo web**.
 - La parte de interacción con el DOM ya me resulta más clara y motivadora.
@@ -78,7 +85,7 @@ Esto me ayuda a **conectar teoría y práctica** antes de que el Bootcamp avance
 
 ---
 
-# 🚀 Próximos pasos
+## 🚀 Próximos pasos
 
 1. Seguir con los ejercicios de lógica y funciones.
 2. Hacer mini proyectos para **aplicar los cálculos en la práctica**.

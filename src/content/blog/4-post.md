@@ -1,8 +1,15 @@
 ---
-title: "# 4 # 🤯 Dudas, vueltas y un café frío"
-description: ""
+title: "🤯 Dudas, vueltas y un café frío"
+description: "El dilema de las dos Lauras: buscar bootcamps, dudar de todo y preguntarme si de verdad vale la pena empezar de cero."
 pubDate: "Jul 30 2025"
 heroImage: "../../assets/cover-capitulo4.jpeg"
+chapter: 4
+category: camino
+tags: ["dudas", "síndrome del impostor"]
+lang: es
+translationKey: "4-dudas-vueltas-y-un-cafe"
+draft: false
+featured: false
 ---
 
 Aquí me encuentro otra vez: dándole mil vueltas a la

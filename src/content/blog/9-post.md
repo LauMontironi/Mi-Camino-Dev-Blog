@@ -1,8 +1,15 @@
 ---
-title: "# 9 # 🐍 Querido Python:"
-description: ""
+title: "🐍 Querido Python:"
+description: "Una carta de amor (y de sintaxis confusa) a Python, escrita por alguien que venía de JavaScript y del mito del lenguaje fácil."
 pubDate: "Oct 16 2025"
 heroImage: "../../assets/cover-capitulo9.jpeg"
+chapter: 9
+category: codigo
+tags: ["Python"]
+lang: es
+translationKey: "9-querido-python"
+draft: false
+featured: false
 ---
 
 La carta de amor y sintaxis confusa de una desarrolladora que viene de JS:
