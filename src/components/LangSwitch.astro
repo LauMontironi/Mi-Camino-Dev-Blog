@@ -1,19 +1,30 @@
 ---
 /**
- * ES / EN control.
- * Spanish is the only language for now, so the EN side is visibly present
- * but disabled — it never navigates and never 404s. The i18n phase will
- * turn this into real links to the paired translation.
+ * ES / EN switch.
+ * `altHref` is resolved from real data (fixed routes, or a translationKey
+ * pair for articles). When there is no counterpart the other language is
+ * shown but disabled — it never links to a guessed or dead URL.
  */
+import { useTranslations, type Locale } from '../i18n/ui';
+
+interface Props {
+  lang: Locale;
+  altHref?: string | null;
+}
+const { lang, altHref = null } = Astro.props;
+const t = useTranslations(lang);
+const other: Locale = lang === 'es' ? 'en' : 'es';
+const labels: Record<Locale, string> = { es: 'ES', en: 'EN' };
 ---
 
-<div class="p-lang" role="group" aria-label="Idioma / Language">
-  <button type="button" data-lang="es" aria-pressed="true">ES</button>
-  <button
-    type="button"
-    data-lang="en"
-    aria-pressed="false"
-    aria-disabled="true"
-    title="English coming soon"
-  >EN</button>
+<div class="p-lang" role="group" aria-label={t('lang.group')}>
+  <span aria-current="true" aria-pressed="true">{labels[lang]}</span>
+
+  {altHref ? (
+    <a href={altHref} aria-pressed="false" lang={other} hreflang={other}>{labels[other]}</a>
+  ) : (
+    <button type="button" aria-pressed="false" aria-disabled="true" title={t('lang.unavailable')}>
+      {labels[other]}
+    </button>
+  )}
 </div>

@@ -3,24 +3,26 @@ import { Image } from 'astro:assets';
 import BaseLayout from './BaseLayout.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import '../styles/article.css';
-import { CATEGORIES, formatDate, readingTime, type CategoryKey } from '../lib/posts';
+import { readingTime, type CategoryKey } from '../lib/posts';
+import { CATEGORIES, CATEGORY_STYLE, ROUTES, formatDate, useTranslations, UI, type Locale } from '../i18n/ui';
 
 interface Props {
   entry: any;
+  lang: Locale;
   headings: { depth: number; slug: string; text: string }[];
   prev: { href: string; title: string } | null;
   next: { href: string; title: string } | null;
+  altHref?: string | null;
 }
 
-const { entry, headings, prev, next } = Astro.props;
+const { entry, lang, headings, prev, next, altHref = null } = Astro.props;
+const t = useTranslations(lang);
 const d = entry.data;
-const category = CATEGORIES[d.category as CategoryKey];
+const categoryKey = d.category as CategoryKey;
+const category = CATEGORIES[lang][categoryKey];
 const minutes = readingTime(entry.body);
 
-/**
- * A table of contents has to earn its place:
- * a long TECHNICAL post with code. Narrative posts get none.
- */
+/** A table of contents has to earn its place: a long TECHNICAL post with code. */
 const showToc =
   d.category === 'codigo' &&
   headings.filter((h) => h.depth === 2).length >= 6 &&
@@ -28,24 +30,26 @@ const showToc =
 ---
 
 <BaseLayout
-  title={`${d.title} | Lau | Mi camino Dev-Blog`}
+  lang={lang}
+  title={`${d.title} | ${UI[lang]['site.title']}`}
   description={d.description}
   current="blog"
   bodyClass="is-article"
   image={d.heroImage}
   type="article"
+  altHref={altHref}
 >
   <div class="read-bar" id="read-bar"></div>
 
   <main class="article">
     <div class="article__inner">
-      <a class="article__back" href="/blog/">← Volver al blog</a>
+      <a class="article__back" href={ROUTES.blog[lang]}>{t('article.back')}</a>
 
       <div class="article__meta">
-        <a class={`cat ${category.className}`} href={`/blog/?cat=${d.category}`}>
+        <a class={`cat ${CATEGORY_STYLE[categoryKey]}`} href={`${ROUTES.blog[lang]}?cat=${categoryKey}`}>
           <span aria-hidden="true">{category.emoji}</span> {category.label}
         </a>
-        {d.chapter && <span class="post__chapter">Capítulo #{d.chapter}</span>}
+        {d.chapter && <span class="post__chapter">{t('article.chapter')} #{d.chapter}</span>}
       </div>
 
       <h1 class="article__title">{d.title}</h1>
@@ -54,8 +58,8 @@ const showToc =
 
       <p class="article__byline">
         <span>Laura Montironi</span>
-        <span>{formatDate(d.pubDate)}</span>
-        <span>{minutes} min de lectura</span>
+        <span>{formatDate(d.pubDate, lang)}</span>
+        <span>{minutes} {t('article.readingTime')}</span>
       </p>
     </div>
 
@@ -65,7 +69,7 @@ const showToc =
       </figure>
     )}
 
-    {showToc && <TableOfContents headings={headings} />}
+    {showToc && <TableOfContents headings={headings} lang={lang} />}
 
     <!-- .prose sets its own measure so pull quotes, the stat strip,
          code and figures can break out of it. -->
@@ -76,23 +80,23 @@ const showToc =
     <div class="article__end">
       {d.tags.length > 0 && (
         <div>
-          <p class="article__tagline">Temas</p>
+          <p class="article__tagline">{t('article.topics')}</p>
           <div class="article__tags">
-            {d.tags.map((t: string) => <span class="tag">#{t}</span>)}
+            {d.tags.map((tag: string) => <span class="tag">#{tag}</span>)}
           </div>
         </div>
       )}
 
-      <nav class="pager" aria-label="Más capítulos">
+      <nav class="pager" aria-label={t('article.pager')}>
         {prev && (
           <a href={prev.href}>
-            <span class="pager__label">← Capítulo anterior</span>
+            <span class="pager__label">{t('article.prev')}</span>
             <span class="pager__title">{prev.title}</span>
           </a>
         )}
         {next && (
           <a href={next.href}>
-            <span class="pager__label">Capítulo siguiente →</span>
+            <span class="pager__label">{t('article.next')}</span>
             <span class="pager__title">{next.title}</span>
           </a>
         )}

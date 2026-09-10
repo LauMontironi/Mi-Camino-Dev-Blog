@@ -1,11 +1,11 @@
 ---
 import { render } from 'astro:content';
-import ArticleLayout from '../../layouts/ArticleLayout.astro';
-import { getPosts, getRoutableEntries, getTranslationMap, slugOf } from '../../lib/posts';
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+import { getPosts, getRoutableEntries, getTranslationMap, slugOf } from '../../../lib/posts';
 
 export async function getStaticPaths() {
-  const posts = await getPosts('es');
-  const all = await getRoutableEntries('es');
+  const posts = await getPosts('en');
+  const all = await getRoutableEntries('en');
   const translations = await getTranslationMap();
   const order = new Map(posts.map((p, i) => [p.id, i]));
 
@@ -16,8 +16,7 @@ export async function getStaticPaths() {
       params: { slug: slugOf(entry) },
       props: {
         entry,
-        // only ever the real counterpart, never a guessed URL
-        altHref: translations.get(entry.data.translationKey)?.en ?? null,
+        altHref: translations.get(entry.data.translationKey)?.es ?? null,
         next: has && posts[i - 1] ? { href: posts[i - 1].href, title: posts[i - 1].title } : null,
         prev: has && posts[i + 1] ? { href: posts[i + 1].href, title: posts[i + 1].title } : null,
       },
@@ -29,6 +28,6 @@ const { entry, prev, next, altHref } = Astro.props;
 const { Content, headings } = await render(entry);
 ---
 
-<ArticleLayout entry={entry} lang="es" headings={headings} prev={prev} next={next} altHref={altHref}>
+<ArticleLayout entry={entry} lang="en" headings={headings} prev={prev} next={next} altHref={altHref}>
   <Content />
 </ArticleLayout>

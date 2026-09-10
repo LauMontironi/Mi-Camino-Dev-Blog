@@ -1,0 +1,103 @@
+---
+/**
+ * ARCHIVE — /blog/ and /en/blog/.
+ * The English archive lists ONLY genuinely translated articles; it never
+ * implies that an untranslated Spanish post exists in English.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../PostCard.astro';
+import { getPosts, type CategoryKey } from '../../lib/posts';
+import {
+  CATEGORIES, FILTER_STYLE, ROUTES, useTranslations, type Locale,
+} from '../../i18n/ui';
+
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const other: Locale = lang === 'es' ? 'en' : 'es';
+
+const posts = await getPosts(lang);
+const spanishTotal = (await getPosts('es')).length;
+
+const counts = posts.reduce((acc, p) => {
+  acc[p.categoryKey] = (acc[p.categoryKey] ?? 0) + 1;
+  return acc;
+}, {} as Record<CategoryKey, number>);
+const cats = (Object.keys(CATEGORIES[lang]) as CategoryKey[]).filter((k) => (counts[k] ?? 0) > 0);
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${t('archive.pageTitle')} | ${lang === 'es' ? 'Lau | Mi camino Dev-Blog' : 'Lau | My Dev Journey'}`}
+  description={t('archive.pageDescription')}
+  current="blog"
+  altHref={ROUTES.blog[other]}
+>
+  <main class="p-wrap" style="padding-top: clamp(1.5rem, 4vw, 2.75rem)">
+    <div class="archive__head">
+      <h1 class="archive__title">{t('archive.title')} <em>{t('archive.titleEm')}</em></h1>
+      <p class="archive__lede">{t('archive.lede', { n: posts.length })}</p>
+
+      {/* Only shown while some chapters are still untranslated. */}
+      {lang === 'en' && posts.length < spanishTotal && (
+        <p class="archive__note">
+          {t('archive.spanishNote', { n: spanishTotal })}{' '}
+          <a href={ROUTES.blog.es} hreflang="es">{t('archive.spanishLink')}</a>
+        </p>
+      )}
+    </div>
+
+    <div class="filters" role="group" aria-label={t('filters.group')}>
+      <span class="filters__label">{t('filters.label')}</span>
+      <button class="filter" type="button" data-filter="all" aria-pressed="true">
+        {t('filters.all')} <span class="cat__count">{posts.length}</span>
+      </button>
+      {cats.map((key) => (
+        <button class={`filter ${FILTER_STYLE[key]}`} type="button" data-filter={key} aria-pressed="false">
+          <span aria-hidden="true">{CATEGORIES[lang][key].emoji}</span> {CATEGORIES[lang][key].label}
+          <span class="cat__count">{counts[key]}</span>
+        </button>
+      ))}
+    </div>
+
+    <div class="bento" id="archive-grid">
+      {posts.map((post, i) => (
+        <PostCard
+          post={post}
+          lang={lang}
+          span={post.featured ? 'span-6' : 'span-4'}
+          tone={i % 7 === 1 ? 'tone-yellow' : i % 11 === 4 ? 'tone-mint' : ''}
+        />
+      ))}
+      <p class="archive__empty" id="archive-empty" hidden>{t('archive.empty')}</p>
+    </div>
+  </main>
+</BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll('.filter');
+  const cards = document.querySelectorAll('#archive-grid .post');
+  const empty = document.getElementById('archive-empty');
+
+  function apply(filter) {
+    let shown = 0;
+    cards.forEach((card) => {
+      const match = filter === 'all' || card.dataset.category === filter;
+      card.hidden = !match;
+      if (match) shown++;
+    });
+    if (empty) empty.hidden = shown !== 0;
+    buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filter === filter)));
+  }
+
+  buttons.forEach((b) => b.addEventListener('click', () => {
+    apply(b.dataset.filter);
+    const url = new URL(window.location.href);
+    if (b.dataset.filter === 'all') url.searchParams.delete('cat');
+    else url.searchParams.set('cat', b.dataset.filter);
+    history.replaceState({}, '', url);
+  }));
+
+  const initial = new URL(window.location.href).searchParams.get('cat');
+  if (initial) apply(initial);
+</script>

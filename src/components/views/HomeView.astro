@@ -1,0 +1,173 @@
+---
+/**
+ * HOMEPAGE — the approved bento design, rendered for either locale.
+ * One implementation so the two languages can never drift apart.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../PostCard.astro';
+import { getPosts, type CategoryKey } from '../../lib/posts';
+import {
+  CATEGORIES, CATEGORY_STYLE, ROUTES, UI, formatMonth, useTranslations, type Locale,
+} from '../../i18n/ui';
+
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const other: Locale = lang === 'es' ? 'en' : 'es';
+
+const posts = await getPosts(lang);
+// The diary is authored in Spanish; those numbers describe the whole journey.
+const written = await getPosts('es');
+
+const latest = posts[0];
+const smallOnes = posts.slice(1, 5);
+const wideOnes = posts.slice(5, 8);
+
+const rangeFrom = formatMonth(written[written.length - 1].pubDate, lang);
+const rangeTo = formatMonth(written[0].pubDate, lang);
+
+const counts = posts.reduce((acc, p) => {
+  acc[p.categoryKey] = (acc[p.categoryKey] ?? 0) + 1;
+  return acc;
+}, {} as Record<CategoryKey, number>);
+// only show categories that actually have articles in this language
+const cats = (Object.keys(CATEGORIES[lang]) as CategoryKey[]).filter((k) => (counts[k] ?? 0) > 0);
+---
+
+<BaseLayout
+  lang={lang}
+  title={UI[lang]['site.title']}
+  description={UI[lang]['site.description']}
+  current="home"
+  altHref={ROUTES.home[other]}
+>
+  <main class="p-wrap" style="padding-top: clamp(1.5rem, 4vw, 2.75rem)">
+
+    <!-- 1. HERO BENTO -->
+    <section class="bento">
+      <div class="cell span-7 row-2">
+        <span class="hero__status">
+          <span class="hero__dot"></span> {t('hero.status')} #{written[0].chapter}
+        </span>
+
+        <p class="hero__kicker">{t('hero.kicker')}</p>
+
+        <h1 class="hero__title">
+          {t('hero.lead')}<br /><em>Laura Montironi</em> <span class="hero__wave">👋</span>
+        </h1>
+
+        <p class="hero__text">{t('hero.text')}</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--pink" href={ROUTES.blog[lang]}>{t('hero.ctaBlog')}</a>
+          <a class="btn btn--plain" href={ROUTES.about[lang]}>{t('hero.ctaAbout')}</a>
+        </div>
+      </div>
+
+      <div class="cell tone-pink span-5 cell--hover">
+        <span class="monogram">LM</span>
+        <h2 class="identity__name">Laura Montironi</h2>
+        <p class="identity__role">{t('identity.role')}</p>
+        <div class="chips">
+          <span class="chip">Backend</span>
+          <span class="chip">Python</span>
+          <span class="chip">Barcelona</span>
+        </div>
+      </div>
+
+      <div class="cell tone-blue span-5 cell--hover">
+        <span class="cell__label">{t('now.label')}</span>
+        <p style="font-family: var(--font-display); font-weight: 800; font-size: clamp(1.1rem, 1.9vw, 1.5rem); line-height: 1.15;">
+          {t('now.text')}
+        </p>
+        <div class="chips">
+          <span class="chip">Ruby</span>
+          <span class="chip">RSpec</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Jenkins</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. STATS / QUOTE STRIP -->
+    <section class="bento" style="margin-top: var(--gap)">
+      <div class="cell tone-yellow span-3">
+        <span class="cell__label">{t('stats.label')}</span>
+        <span class="stat__number">{written.length}</span>
+        <p style="font-weight:600; font-size:0.88rem">
+          {t('stats.caption', { from: rangeFrom, to: rangeTo })}
+        </p>
+      </div>
+
+      <div class="cell tone-lilac span-5">
+        <span class="cell__label">{t('quote.label')}</span>
+        <p class="quote__text">{t('quote.text')}</p>
+        <p class="quote__by">{t('quote.by')}</p>
+      </div>
+
+      <div class="cell tone-mint span-4">
+        <span class="cell__label">{t('journey.label')}</span>
+        <p class="journey">
+          🇦🇷 Córdoba <span class="journey__arrow">→</span> 🇪🇸 Barcelona
+        </p>
+        <ul class="timeline">
+          <li>{t('journey.1')}</li>
+          <li>{t('journey.2')}</li>
+          <li>{t('journey.3')}</li>
+          <li>{t('journey.4')}</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. CATEGORIES / TAGS -->
+    <section class="section">
+      <div class="section__head">
+        <h2 class="section__title">{t('topics.title')}</h2>
+        <a class="section__link" href={ROUTES.blog[lang]}>{t('topics.link')}</a>
+      </div>
+
+      <div class="cell span-12" style="display:block">
+        <div class="cats">
+          {cats.map((key) => (
+            <a class={`cat ${CATEGORY_STYLE[key]}`} href={`${ROUTES.blog[lang]}?cat=${key}`}>
+              <span aria-hidden="true">{CATEGORIES[lang][key].emoji}</span>
+              {CATEGORIES[lang][key].label}
+              <span class="cat__count">{counts[key]}</span>
+            </a>
+          ))}
+        </div>
+
+        <div class="tags" style="margin-top:1rem">
+          {[...new Set(posts.flatMap((p) => p.tags))].slice(0, 16).map((tag) => (
+            <span class="tag">#{tag}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. POSTS BENTO -->
+    <section class="section">
+      <div class="section__head">
+        <h2 class="section__title">{t('latest.title')}</h2>
+        <a class="section__link" href={ROUTES.blog[lang]}>{t('latest.link', { n: posts.length })}</a>
+      </div>
+
+      <div class="bento">
+        <PostCard post={latest} lang={lang} featured span="span-6" rowSpan tone="tone-coral" />
+        {smallOnes.map((post) => <PostCard post={post} lang={lang} span="span-3" />)}
+        {wideOnes.map((post, i) => (
+          <PostCard post={post} lang={lang} span="span-4" tone={i === 1 ? 'tone-yellow' : ''} />
+        ))}
+      </div>
+    </section>
+
+    <!-- 5. CTA -->
+    <section class="section">
+      <div class="cell tone-ink span-12" style="align-items:center; text-align:center; gap:1rem">
+        <h2 style="font-size: clamp(1.5rem, 3.5vw, 2.4rem); max-width: 20ch">{t('cta.title')}</h2>
+        <p style="max-width: 52ch; opacity: 0.8">{t('cta.text')}</p>
+        <a class="btn btn--pink" href={latest.href}>{t('cta.button')}</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

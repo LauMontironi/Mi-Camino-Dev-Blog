@@ -1,23 +1,20 @@
 ---
-/**
- * Only rendered for long TECHNICAL posts (see the rule in the article page).
- * Personal, narrative articles deliberately get no ToC — it would make them
- * read like documentation.
- */
+import { useTranslations, type Locale } from '../i18n/ui';
+
 interface Props {
   headings: { depth: number; slug: string; text: string }[];
+  lang: Locale;
 }
-const { headings } = Astro.props;
+const { headings, lang } = Astro.props;
+const t = useTranslations(lang);
 const items = headings.filter((h) => h.depth === 2);
 ---
 
 {items.length > 0 && (
   <details class="toc" open>
-    <summary>En este artículo</summary>
+    <summary>{t('article.toc')}</summary>
     <ol>
-      {items.map((h) => (
-        <li><a href={`#${h.slug}`}>{h.text}</a></li>
-      ))}
+      {items.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
     </ol>
   </details>
 )}

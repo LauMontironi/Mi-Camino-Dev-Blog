@@ -1,32 +1,43 @@
 ---
+import { ROUTES, useTranslations, type Locale } from '../i18n/ui';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
 const year = new Date().getFullYear();
 ---
 
 <footer class="p-footer">
   <div class="p-wrap">
     <div class="p-footer__card">
-      <h2 class="p-footer__big">Gracias por pasar por acá <span>🤍</span></h2>
+      <h2 class="p-footer__big">{t('footer.big')} <span>🤍</span></h2>
 
       <div class="p-footer__grid">
         <div class="p-footer__col">
-          <h3>Navegar</h3>
-          <a href="/">Inicio</a>
-          <a href="/blog/">Artículos</a>
-          <a href="/about/">Sobre mí</a>
+          <h3>{t('footer.browse')}</h3>
+          <a href={ROUTES.home[lang]}>{t('nav.home')}</a>
+          <a href={ROUTES.blog[lang]}>{t('footer.articles')}</a>
+          <a href={ROUTES.about[lang]}>{t('nav.about')}</a>
         </div>
 
         <div class="p-footer__col">
-          <h3>Encontrarme</h3>
+          <h3>{t('footer.find')}</h3>
           <a href="https://www.linkedin.com/in/laura-montironi" target="_blank" rel="noreferrer">LinkedIn</a>
           <a href="https://github.com/LauMontironi" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://mi-portfolio-dev-laura-montironi.vercel.app/" target="_blank" rel="noreferrer">Portfolio</a>
-          <a href="/rss.xml">RSS</a>
+          <a href={ROUTES.rss[lang]}>RSS</a>
         </div>
 
         <div class="p-footer__col">
-          <h3>Idioma</h3>
-          <span aria-current="true">Español</span>
-          <span style="opacity:.55">English (pronto)</span>
+          <h3>{t('footer.language')}</h3>
+          {lang === 'es'
+            ? <span aria-current="true">{t('footer.spanish')}</span>
+            : <a href={ROUTES.home.es} hreflang="es">{t('footer.spanish')}</a>}
+          {lang === 'en'
+            ? <span aria-current="true">{t('footer.english')}</span>
+            : <a href={ROUTES.home.en} hreflang="en">{t('footer.english')}</a>}
         </div>
       </div>
 

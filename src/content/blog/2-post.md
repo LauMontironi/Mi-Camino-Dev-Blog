@@ -14,7 +14,7 @@ featured: false
 
 ## 🗃️ De los libros a la oficina: una elección sin pasión
 
-Como conté en [mi primer artículo],
+Como conté en [mi primer artículo](/blog/1-post/),
 hice un repaso muy general de mi historia personal. Hoy quiero
 detenerme en algo más concreto: mi recorrido laboral y ese intento
 —constante— de cambio y superación.

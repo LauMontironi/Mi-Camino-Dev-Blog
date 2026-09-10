@@ -2,17 +2,27 @@
 import '../styles/site.css';
 import type { ImageMetadata } from 'astro';
 import SocialImage from '../assets/perfil_avatar.png';
-import { SITE_TITLE } from '../consts';
+import { OG_LOCALE, ROUTES, UI, type Locale } from '../i18n/ui';
 
 interface Props {
+  lang: Locale;
   title: string;
   description: string;
   image?: ImageMetadata;
   type?: 'website' | 'article';
+  /** Same page in the other language, or null when it does not exist. */
+  altHref?: string | null;
 }
 
-const { title, description, image = SocialImage, type = 'website' } = Astro.props;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const { lang, title, description, image = SocialImage, type = 'website', altHref = null } = Astro.props;
+const other: Locale = lang === 'es' ? 'en' : 'es';
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const alternate = altHref ? new URL(altHref, Astro.site) : null;
+
+// x-default points at the default locale (Spanish). Only emitted when a real
+// pair exists — hreflang on a page with no counterpart is meaningless.
+const xDefault = alternate ? (lang === 'es' ? canonical : alternate) : null;
 ---
 
 <meta charset="utf-8" />
@@ -20,8 +30,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <link rel="icon" type="image/png" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/favicon.png" />
 <link rel="sitemap" href="/sitemap-index.xml" />
-<link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href={new URL('rss.xml', Astro.site)} />
 <meta name="generator" content={Astro.generator} />
+
+<link rel="alternate" type="application/rss+xml" title={UI.es['site.title']} href={new URL(ROUTES.rss.es, Astro.site)} hreflang="es" />
+<link rel="alternate" type="application/rss+xml" title={UI.en['site.title']} href={new URL(ROUTES.rss.en, Astro.site)} hreflang="en" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,21 +42,32 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;600&display=swap"
 />
 
-<link rel="canonical" href={canonicalURL} />
+<!-- self-canonical, always -->
+<link rel="canonical" href={canonical} />
+
+<!-- reciprocal hreflang, only for pages that really have a counterpart -->
+{alternate && (
+  <>
+    <link rel="alternate" hreflang={lang} href={canonical} />
+    <link rel="alternate" hreflang={other} href={alternate} />
+    <link rel="alternate" hreflang="x-default" href={xDefault} />
+  </>
+)}
 
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
 <meta property="og:type" content={type} />
-<meta property="og:url" content={canonicalURL} />
+<meta property="og:url" content={canonical} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image.src, Astro.url)} />
-<meta property="og:locale" content="es_ES" />
+<meta property="og:locale" content={OG_LOCALE[lang]} />
+{alternate && <meta property="og:locale:alternate" content={OG_LOCALE[other]} />}
 
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:url" content={canonical} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />

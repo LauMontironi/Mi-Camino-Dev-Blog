@@ -1,16 +1,18 @@
 ---
 import type { Post } from '../lib/posts';
-import { formatDate } from '../lib/posts';
+import { formatDate, useTranslations, type Locale } from '../i18n/ui';
 
 interface Props {
   post: Post;
+  lang: Locale;
   featured?: boolean;
   tone?: string;
   span?: string;
   rowSpan?: boolean;
 }
 
-const { post, featured = false, tone = '', span = 'span-4', rowSpan = false } = Astro.props;
+const { post, lang, featured = false, tone = '', span = 'span-4', rowSpan = false } = Astro.props;
+const t = useTranslations(lang);
 
 const classes = [
   'cell', 'post', span,
@@ -33,13 +35,13 @@ const classes = [
 
     {featured && post.tags.length > 0 && (
       <div class="tags" style="margin-top:0.8rem">
-        {post.tags.map((t) => <span class="tag">#{t}</span>)}
+        {post.tags.map((tag) => <span class="tag">#{tag}</span>)}
       </div>
     )}
   </div>
 
   <div class="post__foot">
-    <span>{formatDate(post.pubDate)} · {post.minutes} min</span>
+    <span>{formatDate(post.pubDate, lang)} · {post.minutes} {t('article.readingTime')}</span>
     <span class="post__arrow" aria-hidden="true">→</span>
   </div>
 </a>

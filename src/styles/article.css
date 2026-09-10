@@ -401,6 +401,8 @@ body.is-article {
   border-bottom: 2px solid var(--paper-2);
 }
 
+.pager:empty { display: none; }
+
 .pager {
   display: grid;
   grid-template-columns: 1fr 1fr;

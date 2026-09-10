@@ -1,38 +1,40 @@
 ---
 import LangSwitch from './LangSwitch.astro';
+import { ROUTES, useTranslations, type Locale } from '../i18n/ui';
 
 interface Props {
+  lang: Locale;
   current?: 'home' | 'blog' | 'about';
+  altHref?: string | null;
 }
-const { current = 'home' } = Astro.props;
+const { lang, current = 'home', altHref = null } = Astro.props;
+const t = useTranslations(lang);
 
 const links = [
-  { key: 'home',  label: 'Inicio',   href: '/' },
-  { key: 'blog',  label: 'Blog',     href: '/blog/' },
-  { key: 'about', label: 'Sobre mí', href: '/about/' },
+  { key: 'home',  label: t('nav.home'),  href: ROUTES.home[lang] },
+  { key: 'blog',  label: t('nav.blog'),  href: ROUTES.blog[lang] },
+  { key: 'about', label: t('nav.about'), href: ROUTES.about[lang] },
 ];
 ---
 
 <header class="p-header">
   <div class="p-wrap">
-    <nav class="p-nav" aria-label="Principal">
-      <a class="p-logo" href="/">
+    <nav class="p-nav" aria-label={t('nav.primary')}>
+      <a class="p-logo" href={ROUTES.home[lang]}>
         <span class="p-logo__mark" aria-hidden="true">LM</span>
         <span>mi camino dev</span>
       </a>
 
       <div class="p-links" id="p-links" data-open="false">
         {links.map((l) => (
-          <a href={l.href} aria-current={current === l.key ? 'page' : undefined}>
-            {l.label}
-          </a>
+          <a href={l.href} aria-current={current === l.key ? 'page' : undefined}>{l.label}</a>
         ))}
       </div>
 
       <div class="p-nav__right">
-        <LangSwitch />
+        <LangSwitch lang={lang} altHref={altHref} />
         <button class="p-burger" type="button" aria-expanded="false" aria-controls="p-links">
-          Menú
+          {t('nav.menu')}
         </button>
       </div>
     </nav>

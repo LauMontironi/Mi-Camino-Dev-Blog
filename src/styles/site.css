@@ -161,7 +161,9 @@ p { margin: 0; }
   background: var(--paper-2);
   padding: 2px;
 }
-.p-lang button {
+.p-lang button,
+.p-lang a,
+.p-lang span {
   font: inherit;
   font-weight: 700;
   font-size: 0.78rem;
@@ -173,7 +175,7 @@ p { margin: 0; }
   padding: 0.32rem 0.7rem;
   border-radius: var(--radius-pill);
 }
-.p-lang button[aria-pressed="true"] {
+.p-lang [aria-pressed="true"] {
   background: var(--ink);
   color: var(--paper);
 }
@@ -676,4 +678,19 @@ a.cell:hover, .cell--hover:hover {
 .about__body strong { font-weight: 700; color: var(--ink); }
 
 /* Language switch: the EN side is present but not yet available */
-.p-lang button[aria-disabled="true"] { opacity: 0.42; cursor: not-allowed; }
+.p-lang [aria-disabled="true"] { opacity: 0.42; cursor: not-allowed; }
+.p-lang a { text-decoration: none; }
+
+/* Honest note on the English archive about translation coverage */
+.archive__note {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: var(--paper-2);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem;
+  max-width: 62ch;
+}
+.archive__note a { color: var(--ink); text-underline-offset: 3px; }

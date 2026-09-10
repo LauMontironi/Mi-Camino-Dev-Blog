@@ -1,0 +1,97 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AboutImage from '../../assets/about4.png';
+import { ROUTES, UI, useTranslations, type Locale } from '../../i18n/ui';
+
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const other: Locale = lang === 'es' ? 'en' : 'es';
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${t('about.pageTitle')} | ${UI[lang]['site.title']}`}
+  description={t('about.pageDescription')}
+  current="about"
+  altHref={ROUTES.about[other]}
+>
+  <main class="p-wrap" style="padding-top: clamp(1.5rem, 4vw, 2.75rem)">
+
+    <section class="bento about__grid">
+      <div class="cell span-7">
+        <p class="hero__kicker">{t('about.kicker')}</p>
+        <h1 class="hero__title" style="font-size: clamp(2.2rem, 5vw, 3.6rem)">
+          {t('about.titleLead')} <em>{t('about.titleEm')}</em>
+        </h1>
+        <p class="hero__text">{t('about.text')}</p>
+        <div class="hero__actions">
+          <a class="btn btn--pink" href={ROUTES.blog[lang]}>{t('hero.ctaBlog')}</a>
+        </div>
+      </div>
+
+      <div class="cell span-5" style="padding:0; overflow:hidden">
+        <Image src={AboutImage} alt={t('about.imageAlt')} width={760} />
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="article__inner" style="padding-inline:0">
+        <div class="about__body">
+          {lang === 'es' ? (
+            <>
+              <h2>🌿 Sobre mí</h2>
+              <p>Me llamo <strong>Laura Montironi</strong>. Nací en Córdoba, Argentina, donde estudié y me gradué como <strong>Contadora Pública</strong> en la Universidad Nacional de Córdoba – Facultad de Ciencias Económicas.</p>
+              <p>A los seis meses de recibirme, me mudé a Barcelona con mi marido, a quien conocí en los dos últimos años del colegio La Salle de Córdoba. Estudiamos juntos la carrera en la universidad y nunca nos separamos. Ya en Barcelona, continué mi formación con un <strong>MBA en EAE Business School</strong>.</p>
+              <p>Mi camino profesional parecía claro, prolijo y lógico. Finanzas, números, planificación, crecimiento. Todo encajaba… al menos desde afuera. Pero por dentro, algo no terminaba de acomodarse.</p>
+              <p>Siempre había una pregunta que volvía, aunque yo hiciera lo posible por ignorarla: <em>¿Esto me gusta de verdad? ¿Disfruto lo que hago?</em></p>
+              <p>No me daba tiempo a escucharla. Había que seguir, avanzar, cumplir. A esa “ensalada mental” se le sumaba el desafío diario de vivir en otro país, lejos de mi familia, mis amigos y todo lo conocido. Adaptarme, rendir, sostener… sin frenar.</p>
+              <p>Pasaron los años y me convertí en madre 👶. Y fue ahí cuando todo lo que había estado en segundo plano empezó a hacer ruido. Mucho ruido.</p>
+              <p>Mis dudas, mis miedos y el cansancio de no sentirme del todo alineada… todo explotó. No fue cómodo. No fue prolijo. Pero por primera vez, en lugar de taparlo, lo escuché.</p>
+              <p>La pausa que me regaló la maternidad me dio algo que antes no tenía: <strong>tiempo para pensar de verdad</strong>. Tiempo para preguntarme quién era, qué quería y cómo quería vivir mi vida profesional.</p>
+              <p>La respuesta no fue inmediata, pero sí clara: necesitaba un cambio profundo. <strong>Un giro de 180 grados.</strong></p>
+              <p>Así empecé a acercarme al mundo de la tecnología y la programación 💻. Con miedo, con culpa, con síndrome de impostora, con mil dudas… pero también con una curiosidad que hacía años no sentía y una ilusión que me devolvía energía.</p>
+              <h3>💡 ¿Por qué “Mi Camino Dev”?</h3>
+              <p>Porque no es solo aprender a programar. Es aprender a <strong>reconstruirme profesionalmente</strong>, a tolerar la incertidumbre, a volver a ser principiante, a equivocarme sin tener todas las respuestas.</p>
+              <p>Este blog nace como una forma de dejar por escrito todo lo que atraviesa este proceso:</p>
+              <ul>
+                <li>📚 Aprendizajes técnicos</li>
+                <li>🧠 Bloqueos mentales y cómo los atravieso</li>
+                <li>❌ Errores que me enseñan</li>
+                <li>🚀 Pequeñas victorias en el camino</li>
+              </ul>
+              <p>No es el blog de alguien que “ya lo logró”. Es el de alguien que <strong>está caminando el proceso</strong>, paso a paso.</p>
+              <p>En fin… este es mi camino. <strong>Gracias por acompañarme 🤍</strong></p>
+            </>
+          ) : (
+            <>
+              <h2>🌿 About me</h2>
+              <p>My name is <strong>Laura Montironi</strong>. I was born in Córdoba, Argentina, where I studied and graduated as a <strong>Chartered Accountant</strong> at the National University of Córdoba – Faculty of Economic Sciences.</p>
+              <p>Six months after graduating, I moved to Barcelona with my husband, whom I met in the last two years of school at La Salle in Córdoba. We studied the same degree together at university and we never separated. Once in Barcelona, I carried on studying and did an <strong>MBA at EAE Business School</strong>.</p>
+              <p>My career looked clear, tidy and logical. Finance, numbers, planning, growth. Everything fitted… at least from the outside. But on the inside, something never quite settled.</p>
+              <p>There was always a question that kept coming back, however hard I tried to ignore it: <em>Do I actually like this? Do I enjoy what I do?</em></p>
+              <p>I never gave myself time to listen to it. I had to keep going, keep moving, keep delivering. On top of that mental jumble there was the daily challenge of living in another country, far from my family, my friends and everything familiar. Adapting, performing, holding it all together… without stopping.</p>
+              <p>Years went by and I became a mother 👶. And that was when everything I had pushed into the background started making noise. A lot of noise.</p>
+              <p>My doubts, my fears and the exhaustion of not feeling aligned… it all blew up. It was not comfortable. It was not tidy. But for the first time, instead of covering it up, I listened to it.</p>
+              <p>The pause that motherhood gave me came with something I had never had before: <strong>time to really think</strong>. Time to ask myself who I was, what I wanted, and how I wanted to live my professional life.</p>
+              <p>The answer did not come immediately, but it was clear: I needed a deep change. <strong>A turn of 180 degrees.</strong></p>
+              <p>That is how I started moving towards technology and programming 💻. Afraid, guilty, with impostor syndrome, with a thousand doubts… but also with a curiosity I had not felt in years, and an excitement that gave me energy back.</p>
+              <h3>💡 Why “Mi Camino Dev”?</h3>
+              <p>Because it is not only about learning to code. It is about learning to <strong>rebuild myself professionally</strong>, to sit with uncertainty, to be a beginner again, to get things wrong without having all the answers.</p>
+              <p>This blog exists as a way of writing down everything this process involves:</p>
+              <ul>
+                <li>📚 Technical learnings</li>
+                <li>🧠 Mental blocks and how I work through them</li>
+                <li>❌ Mistakes that teach me something</li>
+                <li>🚀 Small wins along the way</li>
+              </ul>
+              <p>This is not the blog of someone who “already made it”. It is the blog of someone who is <strong>walking the path</strong>, step by step.</p>
+              <p>So… this is my journey. <strong>Thanks for walking it with me 🤍</strong></p>
+            </>
+          )}
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

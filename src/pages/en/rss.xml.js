@@ -1,14 +1,14 @@
 import rss from '@astrojs/rss';
-import { getPosts } from '../lib/posts';
-import { UI } from '../i18n/ui';
+import { getPosts } from '../../lib/posts';
+import { UI } from '../../i18n/ui';
 
 export async function GET(context) {
-	const posts = await getPosts('es');
+	const posts = await getPosts('en');
 	return rss({
-		title: UI.es['site.title'],
-		description: UI.es['site.description'],
+		title: UI.en['site.title'],
+		description: UI.en['site.description'],
 		site: context.site,
-		customData: '<language>es-ES</language>',
+		customData: '<language>en-US</language>',
 		items: posts.map((post) => ({
 			title: post.title,
 			description: post.description,
